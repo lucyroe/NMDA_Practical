@@ -118,8 +118,12 @@ for sub_number=1:length(subjects)
                 % add onsets to big cell array
                 onsets_duration_runs{run_number, 1} = onsets_run_conditions;
 
-                % TO DO: write extract_duration function
-                
+                % extract durations using the function extract_durations.m
+                durations = extract_durations(onsets_run_conditions);
+                % TO DO: fix extract_durations.m (doesn't work)
+
+                % add durations to big cell array
+                onsets_duration_runs{run_number, 2} = durations;
             end
     
         elseif step == '4'
