@@ -4,7 +4,7 @@
 
 %% SETUP -----------------------------------------------------------------
 
-runs = {'1', '2', '3', '4', '5', '6'};  % runs
+runs = {'01', '02', '03', '04', '05', '06'};  % runs
 subjects = {'001'}; % subjects
 conditions_runs = {'alternating', 'simulatenous'};  % conditions in the runs
 conditions_localizer = {'left_stimulation', 'right_stimulation', ...
@@ -18,7 +18,8 @@ spmpath = fullfile('/Users/Lucy/Documents/MATLAB/spm12');
 % change to where you downloaded the spm toolbox
 addpath(scriptpath, datapath, spmpath)   % add script, data and spm path
 
-steps = {'1', '2', '3', '4', '5'};    % analysis steps to be performed
+steps = {'1'};
+% , '2', '3', '4', '5'};    % analysis steps to be performed
 %   1:   Preprocessing
 %   2:   Localizer Analysis
 %   3:   First Level Analysis - Contrasts Alternating / Simultaneous
@@ -60,24 +61,102 @@ for sub_number=1:length(subjects)
 
         if step == '1'
         %% STEP 1: PREPROCESSING ------------------------------------------
-            % REALIGNMENT (motion correction) of epi images
-            % prefix "r"
-            
-            % CO-REGISTRATION puts t1 and (mean) epi image in the same 
-            % space
-            
-            % SEGMENTATION of the t1 image into white and grey matter
-            % output: deformation field
-            
-            % NORMALISATION uses deformation field to normalize epi images 
-            % into MNE space
-            % prefix "w"
-            
-            % SMOOTHING
-            % prefix "s"
+            % LOAD DATA
+            datapath_nifti = fullfile(datapath, sprintf('sub-%s', ...
+                subject), 'nifti_files');
+
+            % loop over runs & localizer
+            for run_number=1:length(runs)+1
+                if run_number > length(runs)
+                    run = 'localizer';
+                    datapath_run = fullfile(datapath_nifti, run);
+                else
+                    run = runs{run_number};
+                    datapath_run = fullfile(datapath_nifti, sprintf('run%s', ...
+                    run));
+                end
+                cd(datapath_run)
+
+                % list all nifti files
+                nifti_list = dir('*.nii');
+
+                functional_images = cell(360,1);
+                for file=1:length(nifti_list)
+                    functional_images{file} = fullfile(datapath_run, ...
+                        nifti_list(file).name);
+                end
+
+                % REALIGNMENT (motion correction) of epi images
+                % prefix "r"
+                realigned_images = realign_job(functional_images);
+                % this does not realign images as we need seperate cells
+                % for each run in order for this to work (as each run is
+                % realigned in relation to all the other runs)
+                % TO DO: change this so we have one cell array with seven
+                % cells for all runs (create separate run loop) and only
+                % then realign all the images
+                
+                % CO-REGISTRATION puts t1 and (mean) epi image in the same 
+                % space
+                 structural_dir = fullfile(datapath_nifti, 'structural');
+                cd(structural_dir)
+                structural_image = fullfile(structural_dir, ...
+                    dir('MFV*.nii').name); % load structural image
+                cd(datapath_run)
+                mean_functional_image = fullfile(datapath_run, ...
+                    dir('mean*').name);  
+                % select mean image from realignment
+                coregistered_images = coregister_job( ...
+                    mean_functional_image, structural_image);    
+                % co-registrates the structural image with the
+                % realigned functional image
+                
+                % SEGMENTATION of the t1 image into white and grey matter
+                % output: deformation field
+                cd(fullfile(spmpath, 'tpm'))
+
+                tpm_file = fullfile(spmpath, 'tpm', dir('TPM*').name);
+                % select tpm file
+                s_img = segment_job(structural_image, tpm_file);  
+                % segments the structural image    
+
+                % NORMALISATION uses deformation field to normalize epi images 
+                % into MNE space
+                % prefix "w"
+                cd(structural_dir)
+                deformation_file = fullfile(structural_dir, dir( ...
+                    'y*.nii').name);    % select deformation file
+
+                cd(datapath_run)
+                realigned_files_list = dir('r*.nii'); 
+                % select realigned files
+                realigned_files = cell(360,1);
+                for file=1:length(realigned_files_list)
+                    realigned_files{file} = fullfile(datapath_run, ...
+                        realigned_files_list(file).name);
+                end
+
+                normalized_images = normalise_functional_job( ...
+                    deformation_file, realigned_files); % normalize
+                % realigned images
+                
+                % SMOOTHING
+                % prefix "s"
+                normalized_files_list = dir('wr*.nii'); 
+                % select normalized files
+                normalized_files = cell(360,1);
+                for file=1:length(normalized_files_list)
+                    normalized_files{file} = fullfile(datapath_run, ...
+                        normalized_files_list(file).name);
+                end
+
+                smoothed_images = smooth_job(normalized_files); 
+                % smoothes all images
+
+            end
             
         elseif step == '2' 
-        %% STEP 1: LOCALIZER ANALYSIS ------------------------------------
+        %% STEP 2: LOCALIZER ANALYSIS ------------------------------------
             
             % ********************** DATA FORMATTING *********************
             % extract onsets of different conditions (alt/stim/baseline) 
@@ -95,15 +174,14 @@ for sub_number=1:length(subjects)
             % condition and so on
     
         elseif step == '3'
-        %% STEP 2: FIRST LEVEL ANALYSIS - CONTRASTS ALT/SIM --------------
+        %% STEP 3: FIRST LEVEL ANALYSIS - CONTRASTS ALT/SIM --------------
             
             % ********************** DATA FORMATTING *********************
-            % extract onsets & durations of blocks / switches (from alt to 
-            % stim and vice versa) from run log file for each run
+            % extract onsets of blocks / switches (from alt to stim and 
+            % vice versa) from run log file for each run
 
-            % initiate empty array to fill with onsets and durations for
-            % all runs
-            onsets_durations_runs = cell(length(runs),2);
+            % initiate empty array to fill with onsets for all runs
+            onsets_durations_runs = cell(length(runs),1);
 
             for run_number=1:length(runs)
                 % get corresponding logfile name
@@ -117,20 +195,20 @@ for sub_number=1:length(subjects)
 
                 % add onsets to big cell array
                 onsets_duration_runs{run_number, 1} = onsets_run_conditions;
+                
+                % we now have a 2x1 cell array for each run, combined into
+                % a 6x1 cell array for all six runs
+                % for each run, there's the onset of the switches from alt
+                % to sim in the first cell, and the onset of the switches
+                % from sim to alt in the second cell
 
-                % extract durations using the function extract_durations.m
-                durations = extract_durations(onsets_run_conditions);
-                % TO DO: fix extract_durations.m (doesn't work)
-
-                % add durations to big cell array
-                onsets_duration_runs{run_number, 2} = durations;
             end
     
         elseif step == '4'
-        %% (STEP 3: DECODING) --------------------------------------------
+        %% (STEP 4: DECODING) --------------------------------------------
             
         elseif step == '5'
-        %% (STEP 4: GROUP LEVEL ANALYSIS) --------------------------------
+        %% (STEP 5: GROUP LEVEL ANALYSIS) --------------------------------
 
         end
     end
