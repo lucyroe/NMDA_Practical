@@ -1,0 +1,89 @@
+% deciper log files: localizer! bicep!
+
+task = 1; % 0 = localizer, 1 = bicep
+subjects = {'001'}; % subjects
+
+if task == 0
+
+    sourceF = '/Users/Lucy/Documents/Berlin/FU/MCNB/3Semester/NMDA_Practical/data';
+    
+    for subject_number = subjects 
+        subject = subjects{subject_number};
+        subject_datapath = fullfile(sourceF, sprintf('sub-%s', subject));
+        cd(fullfile(sourceF, sprintf('sub-%s', subject)));
+    
+        logs = dir('log*');
+    
+        for r = 1:size(logs)
+        
+            load(logs(r).name);
+            conds = log.conditions;
+            ons = log.onset;
+            indices = ([1:size(conds,2)]*2)-1;
+            onsets = ons(indices);
+        
+            new_log = [[1:size(conds,2)]'...
+                        onsets'...
+                        conds'];
+            new_log_C = arrayfun(@num2str,new_log,'UniformOutput',false);
+        
+            fileID = fopen(['C:\Users\saraw\Desktop\evenmoremodules\theSeminar\localizer\Logs\LogFile_subject-' num2str(s) '_run-' num2str(r) '.tsv'],'w');       %creates the empty logfile in the directory you specify
+            formatSpec2 = '%s\t%s\t%s\n';  %%% it only works like this as the header format
+            labels = ["TrialNr" "onset" "condition"];     %Specifies labels for each column that should be in the logfile.
+            fprintf(fileID, formatSpec2, labels);        %This actially prints the line labels into the first row of the log file.
+            for f = 1:size(conds,2)
+                fprintf(fileID, formatSpec2, new_log_C{f,:});
+            end
+            fclose(fileID); 
+        
+        end
+    end
+
+elseif task == 1
+
+    behav = readtable('C:\Users\saraw\Desktop\evenmoremodules\theSeminar\BTAPE-Group-Data.csv');
+
+    sourceF = 'C:\Users\saraw\Desktop\evenmoremodules\theSeminar\bicep\logs_till_bicep';
+    
+    subs = [1];
+    sub_ind = [9];
+    
+    for s = subs 
+    
+        cd(sourceF);
+    
+        logs = dir('log*');
+    
+        for r = 1:size(logs)
+        
+            load(logs(r).name);
+            dif = [-1 diff(log.cueseries)];
+            ons = log.onsets;
+            indices = find(dif);
+            conds = dif(indices);
+            onsets = ons(indices);
+            duration = diff([indices, length(ons)])*0.8;
+            offsetA = repelem(table2array(behav(sub_ind, 4+r)), size(onsets,2));
+            offsetS = repelem(table2array(behav(sub_ind, 10+r)), size(onsets,2));
+        
+            new_log = [[1:size(onsets,2)]'...
+                        onsets'...
+                        conds' ...
+                        duration'...
+                        offsetA'...
+                        offsetS'];
+            new_log_C = arrayfun(@num2str,new_log,'UniformOutput',false);
+        
+            fileID2 = fopen(['C:\Users\saraw\Desktop\evenmoremodules\theSeminar\bicep\Logs\LogFile_subject-' num2str(s) '_run-' num2str(r) '.tsv'],'w');       %creates the empty logfile in the directory you specify
+            formatSpec2 = '%s\t%s\t%s\t%s\t%s\t%s\n';  %%% it only works like this as the header format
+            labels = ["TrialNr" "onset" "condition" "duration" "offsetA" "offsetS"];     %Specifies labels for each column that should be in the logfile.
+            fprintf(fileID2, formatSpec2, labels);        %This actially prints the line labels into the first row of the log file.
+            for f = 1:size(conds,2)
+                fprintf(fileID2, formatSpec2, new_log_C{f,:});
+            end
+            fclose(fileID2); 
+        
+        end
+    end
+
+end
