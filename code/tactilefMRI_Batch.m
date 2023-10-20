@@ -18,8 +18,8 @@ spmpath = fullfile('/Users/Lucy/Documents/MATLAB/spm12');
 % change to where you downloaded the spm toolbox
 addpath(scriptpath, datapath, spmpath)   % add script, data and spm path
 
-steps = {'1'};
-% , '2', '3', '4', '5'};    % analysis steps to be performed
+steps = {'2', '3'};
+% '1', '2', '3', '4', '5'};    % analysis steps to be performed
 %   1:   Preprocessing
 %   2:   Localizer Analysis
 %   3:   First Level Analysis - Contrasts Alternating / Simultaneous
@@ -34,26 +34,6 @@ for sub_number=1:length(subjects)
     subject = subjects{sub_number};
     subject_datapath = fullfile(datapath, sprintf('sub-%s', subject));
     cd(subject_datapath);
-
-    % list logfiles for that subject
-    logPattern = sprintf('log_sub-%s*', subject)';
-    fileList = dir(logPattern);
-
-    % separate localizer and run logfiles
-    localizer_logfile = {};
-    runs_logfiles = {};
-    for i = 1:length(fileList)
-        fileName = fileList(i).name;
-
-        % Check if the file name starts with your desired prefix
-        if startsWith(fileName, sprintf('log_sub-%s localizer', subject)) 
-            % localizer logfile
-            localizer_logfile = string(fileName);
-        elseif startsWith(fileName, sprintf('log_sub-%s_run', subject))
-            % run logfile
-            runs_logfiles = [runs_logfiles, {string(fileName)}];
-        end
-    end
 
     % loop over the desired analysis steps
     for step_number=1:length(steps)
@@ -158,51 +138,26 @@ for sub_number=1:length(subjects)
         elseif step == '2' 
         %% STEP 2: LOCALIZER ANALYSIS ------------------------------------
             
-            % ********************** DATA FORMATTING *********************
-            % extract onsets of different conditions (alt/stim/baseline) 
-            % from localizer log file
-
-            load(localizer_logfile) % load localizer logfile
-
-            % extract onsets using the function extract_onsets.m
-            onsets_localizer_conditions = extract_onsets(log, ...
-                conditions_localizer);
-
-            % we now have a 3x1 cell array where the first cell has a 1x7
-            % vector in it with the onset values of the first condition
-            % (i.e., stimulation_left), the second cell of the second
-            % condition and so on
+            % ********************** DATA LOADING ************************
+            % read in logfiles for localizer
+            
+            localizer_log = read_logfile(fullfile(subject_datapath, ...
+                'log_files', sprintf('log_sub-%s_localizer.txt', ...
+                subject)));
     
         elseif step == '3'
         %% STEP 3: FIRST LEVEL ANALYSIS - CONTRASTS ALT/SIM --------------
             
-            % ********************** DATA FORMATTING *********************
-            % extract onsets of blocks / switches (from alt to stim and 
-            % vice versa) from run log file for each run
-
-            % initiate empty array to fill with onsets for all runs
-            onsets_durations_runs = cell(length(runs),1);
-
+            % ********************** DATA LOADING ************************
+            % loop over runs and read in logfiles for runs
+            run_logs = cell(1,4);
             for run_number=1:length(runs)
-                % get corresponding logfile name
-                run_logfile = runs_logfiles{run_number};
-                % load logfile
-                load(run_logfile)
-
-                % extract onsets using the function extract_onsets.m
-                onsets_run_conditions = extract_onsets(log, ...
-                conditions_runs);
-
-                % add onsets to big cell array
-                onsets_duration_runs{run_number, 1} = onsets_run_conditions;
-                
-                % we now have a 2x1 cell array for each run, combined into
-                % a 6x1 cell array for all six runs
-                % for each run, there's the onset of the switches from alt
-                % to sim in the first cell, and the onset of the switches
-                % from sim to alt in the second cell
-
+                run_log = read_logfile(fullfile(subject_datapath, ...
+                'log_files', sprintf('log_sub-%s_run-%d.txt', ...
+                subject, run_number)));
+                run_logs{run_number} = run_log;
             end
+            
     
         elseif step == '4'
         %% (STEP 4: DECODING) --------------------------------------------
