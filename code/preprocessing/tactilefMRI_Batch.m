@@ -9,6 +9,7 @@ subjects = {'001'}; % subjects
 conditions_runs = {'alternating', 'simulatenous'};  % conditions in the runs
 conditions_localizer = {'left_stimulation', 'right_stimulation', ...
     'baseline'};  % conditions in the localizer
+epoduration = 8; % epoch duration 
 
 scriptpath = fullfile('/Users/Lucy/Documents/GitHub/NMDA_Practical');   
 % change to where the scripts are for you
@@ -144,6 +145,8 @@ for sub_number=1:length(subjects)
             localizer_log = read_logfile(fullfile(subject_datapath, ...
                 'log_files', sprintf('log_sub-%s_localizer.txt', ...
                 subject)));
+ % run localizer over all subjects --> DONE 
+            
     
         elseif step == '3'
         %% STEP 3: FIRST LEVEL ANALYSIS - CONTRASTS ALT/SIM --------------
@@ -158,6 +161,7 @@ for sub_number=1:length(subjects)
                 run_logs{run_number} = run_log;
             end
             
+
     
         elseif step == '4'
         %% (STEP 4: DECODING) --------------------------------------------
