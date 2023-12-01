@@ -4,22 +4,21 @@
 
 %% SETUP -----------------------------------------------------------------
 
-runs = {'01', '02', '03', '04', '05', '06'};  % runs
+runs = {'01', '02', '03', '04', '05', '06'};  % runs 
 subjects = {'001'}; % subjects
 conditions_runs = {'alternating', 'simulatenous'};  % conditions in the runs
 conditions_localizer = {'left_stimulation', 'right_stimulation', ...
     'baseline'};  % conditions in the localizer
-epoduration = 8; % epoch duration 
 
-scriptpath = fullfile('/Users/Lucy/Documents/GitHub/NMDA_Practical');   
+scriptpath = fullfile('/Users/denisekittelmann/Documents/MATLAB/BTAPE/code/');   
 % change to where the scripts are for you
-datapath = fullfile(['/Users/Lucy/Documents/Berlin/FU/MCNB/' ...
-    '3Semester/NMDA_Practical/data']);  % change to where data is for you
-spmpath = fullfile('/Users/Lucy/Documents/MATLAB/spm12');  
+datapath = fullfile('/Users/denisekittelmann/Documents/MATLAB/BTAPE/data/');  % change to where data is for you
+resultspath = fullfile('/Users/denisekittelmann/Documents/MATLAB/BTAPE/results/');
+spmpath = fullfile('/Users/denisekittelmann/Documents/MATLAB/Toolbox/spm12');  
 % change to where you downloaded the spm toolbox
-addpath(scriptpath, datapath, spmpath)   % add script, data and spm path
+addpath(scriptpath, datapath, resultspath, spmpath)  % add script, data and spm path; 
 
-steps = {'2', '3'};
+steps = {'2', '3'}; 
 % '1', '2', '3', '4', '5'};    % analysis steps to be performed
 %   1:   Preprocessing
 %   2:   Localizer Analysis
@@ -69,7 +68,7 @@ for sub_number=1:length(subjects)
 
                 % REALIGNMENT (motion correction) of epi images
                 % prefix "r"
-                realigned_images = realign_job(functional_images);
+                realigned_images = realign_job(functional_images); 
                 % this does not realign images as we need seperate cells
                 % for each run in order for this to work (as each run is
                 % realigned in relation to all the other runs)
@@ -79,7 +78,7 @@ for sub_number=1:length(subjects)
                 
                 % CO-REGISTRATION puts t1 and (mean) epi image in the same 
                 % space
-                 structural_dir = fullfile(datapath_nifti, 'structural');
+                structural_dir = fullfile(datapath_nifti, 'structural');
                 cd(structural_dir)
                 structural_image = fullfile(structural_dir, ...
                     dir('MFV*.nii').name); % load structural image
@@ -142,26 +141,77 @@ for sub_number=1:length(subjects)
             % ********************** DATA LOADING ************************
             % read in logfiles for localizer
             
-            localizer_log = read_logfile(fullfile(subject_datapath, ...
-                'log_files', sprintf('log_sub-%s_localizer.txt', ...
-                subject)));
- % run localizer over all subjects --> DONE 
+            localizer_log = readtable(fullfile(subject_datapath, ...
+                'log_files', sprintf('log_sub-%s_localizer.tsv', ...
+                subject)), "Delimiter", '\t', 'FileType', 'text');
+
+            datapath_nifti = fullfile(datapath, sprintf('sub-%s', ...
+                subject), 'nifti_files');
             
+            localizer_dir = fullfile(datapath_nifti, 'run07');
+
+            % get smoothed images
+            smoothed_imgpath = cellstr(spm_select('FPList', localizer_dir, '^sw.*\.nii$'));
+            smoothed_imgpath = cellfun(@(path) [path, ',1'], smoothed_imgpath, 'UniformOutput', false);
+
+            
+            % epoch duration 
+            epoduration = 8; 
+
+            % define contrast vector 
+            contrastvec = {[1 0 0 0 0 0 0 0], ... 
+                           [0 1 0 0 0 0 0 0], ...
+                           [0 0 1 0 0 0 0 0 0], ...
+                           [1 0 -1 0 0 0 0 0 0], ...
+                           [0 1 -1 0 0 0 0 0 0], ...
+                           [1 -1 0 0 0 0 0 0 0], ...
+                           [-1 1 0 0 0 0 0 0 0]};
+
+            % define outputfolder
+            outputfolder_1stlevel_loc = fullfile(resultspath, '1stlevel_localizer'); 
+
+            % GLM 1stLEVEL LOCALIZER 
+            glm_1stlevel_localizer_job(smoothed_imgpath, localizer_log, localizer_dir, epoduration, conditions_localizer, contrastvec, outputfolder_1stlevel_loc)
     
         elseif step == '3'
         %% STEP 3: FIRST LEVEL ANALYSIS - CONTRASTS ALT/SIM --------------
             
             % ********************** DATA LOADING ************************
-            % loop over runs and read in logfiles for runs
-            run_logs = cell(1,4);
-            for run_number=1:length(runs)
-                run_log = read_logfile(fullfile(subject_datapath, ...
-                'log_files', sprintf('log_sub-%s_run-%d.txt', ...
-                subject, run_number)));
+            % loop over runs and read in logfiles for runs as well as
+            % smoothed images and motion parameters
+            datapath_nifti = fullfile(datapath, sprintf('sub-%s', ...
+                subject), 'nifti_files');
+            run_logs = cell(1,6);
+
+            for run_number = 1:length(runs)
+                run_log = readtable(fullfile(subject_datapath, ...
+                    'log_files', sprintf('log_sub-%s_run-%d.tsv', subject, run_number)), ...
+                    'Delimiter', '\t', 'FileType', 'text');
                 run_logs{run_number} = run_log;
             end
+
+
+            % define contrast vector 
+            contrastvec0 = {[0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ...
+                             0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0], ...% Phase sim
+                            [0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 ...
+                             0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0], ... % Phase alt
+                            [1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 ...
+                             1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0], ... % Switch alt to sim
+                            [-1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 ...
+                             -1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0],...  % Switch sim to alt
+                            [1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ...
+                             1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ]... % Switch as one regressor
+                             };
             
 
+            % define outputfolder
+            outputfolder_1stlevel_switch4reg = fullfile(resultspath, '1stlevel_switch');
+            %outputfolder_1stlevel_switch3reg = fullfile(resultspath, '1stlevel_switch3reg');
+
+            % compute 1st level GLM
+            glm_1stlevel_switch4reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec0, outputfolder_1stlevel_switch4reg)
+            %glm_1stlevel_switch3reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec1, outputfolder_1stlevel_switch3reg)
     
         elseif step == '4'
         %% (STEP 4: DECODING) --------------------------------------------
