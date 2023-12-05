@@ -17,15 +17,7 @@ aov_behavioral_matrix = vertcat(behavioral_alt, behavioral_sim);
 
 % Perform a 2x6 ANOVA (WHAT ABOUT CHECKING THE NORMALITY ASSUMPTION?)
 
-anova2(aov_behavioral_matrix, 9) % main effect of switch, i.e alt vs sim 
-
-% Post-hoc t-tests 
-
-[p, tbl, stats] = anova2(aov_behavioral_matrix, 9);  % stats includes the means for both conditions -> alt needs less trials to switch (weird!)
-
-posthoc_switch = multcompare(stats, "Estimate","row");
-
-tbl_switch = array2table(posthoc_switch ,"VariableNames", ["Alt","Sim","Lower Limit","Alt-Sim","Upper Limit","P-value"]);
+anova2(aov_behavioral_matrix, 9) % main effect of switch, i.e alt vs sim --> alt = easier
 
 
 %% Descriptives
