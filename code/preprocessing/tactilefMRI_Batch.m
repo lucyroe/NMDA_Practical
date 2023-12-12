@@ -192,7 +192,7 @@ for sub_number=1:length(subjects)
 
 
             % define contrast vector 
-            contrastvec0 = {[0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ...
+          contrastvec0 = {[0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ...
                              0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0], ...% Phase sim
                             [0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 ...
                              0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0], ... % Phase alt
@@ -202,16 +202,24 @@ for sub_number=1:length(subjects)
                              -1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0],...  % Switch sim to alt
                             [1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ...
                              1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ]... % Switch as one regressor
-                             };
+                             }; 
+
+            contrastvec1 = {[0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ...
+                             0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0], ...% Phase sim
+                            [0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 ...
+                             0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0], ... % Phase alt
+                             [1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ...
+                             1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ]... % Switch as one regressor
+                             };                  
             
 
             % define outputfolder
-            outputfolder_1stlevel_switch4reg = fullfile(resultspath, '1stlevel_switch');
-            %outputfolder_1stlevel_switch3reg = fullfile(resultspath, '1stlevel_switch3reg');
+            %outputfolder_1stlevel_switch4reg = fullfile(resultspath, '1stlevel_switch');
+            outputfolder_1stlevel_switch3reg = fullfile(resultspath, '1stlevel_switch_3reg');
 
             % compute 1st level GLM
-            glm_1stlevel_switch4reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec0, outputfolder_1stlevel_switch4reg)
-            %glm_1stlevel_switch3reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec1, outputfolder_1stlevel_switch3reg)
+            %glm_1stlevel_switch4reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec0, outputfolder_1stlevel_switch4reg)
+            glm_1stlevel_switch3reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec1, outputfolder_1stlevel_switch3reg)
     
         elseif step == '4'
         %% (STEP 4: DECODING) --------------------------------------------
