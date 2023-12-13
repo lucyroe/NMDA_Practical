@@ -1,4 +1,4 @@
-# AffectiveVR
+# NMDA Practical: Bistable Tactile Perception
 
 `[Last update: December 13, 2023]`
 
@@ -45,7 +45,7 @@ This repository contains all code and ressources concerning the Neurocognitive M
 
 ## Contributors/Collaborators
 
-Ana Boeke
-Cheyenne Cavender
-Denise Kittelmann
-Lucy Roellecke
+Ana Boeke     
+Cheyenne Cavender     
+Denise Kittelmann     
+Lucy Roellecke    
