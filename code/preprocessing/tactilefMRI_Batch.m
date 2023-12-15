@@ -18,7 +18,7 @@ spmpath = fullfile('/Users/denisekittelmann/Documents/MATLAB/Toolbox/spm12');
 % change to where you downloaded the spm toolbox
 addpath(scriptpath, datapath, resultspath, spmpath)  % add script, data and spm path; 
 
-steps = {'2', '3'}; 
+steps = {'3'}; 
 % '1', '2', '3', '4', '5'};    % analysis steps to be performed
 %   1:   Preprocessing
 %   2:   Localizer Analysis
@@ -192,10 +192,10 @@ for sub_number=1:length(subjects)
 
 
             % define contrast vector 
-          contrastvec0 = {[0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ...
-                             0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0], ...% Phase sim
+           contrastvec0 = {[1 -1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ...
+                             0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0], ...% Phase sim > alt (-1 1)
                             [0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 ...
-                             0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0], ... % Phase alt
+                             0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0], ... % Phase alt > sim (1 -1)
                             [1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 ...
                              1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0], ... % Switch alt to sim
                             [-1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 ...
@@ -203,14 +203,17 @@ for sub_number=1:length(subjects)
                             [1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ...
                              1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ]... % Switch as one regressor
                              }; 
+ 
 
-            contrastvec1 = {[0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ...
-                             0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0], ...% Phase sim
-                            [0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 ...
-                             0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0], ... % Phase alt
-                             [1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ...
-                             1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ]... % Switch as one regressor
-                             };                  
+
+
+            contrastvec1 = {[1 -1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0  ...
+                            1 -1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0], ...% Phase sim > alt 
+                            [-1 1 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 ...
+                             -1 1 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 -1 1 0 0 0 0 0 0], ... % Phase alt > sim
+                             [1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 ...
+                             1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0]... % Switch as one regressor
+                             }; 
             
 
             % define outputfolder
