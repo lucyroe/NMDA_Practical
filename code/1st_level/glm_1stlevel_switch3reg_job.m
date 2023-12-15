@@ -52,20 +52,6 @@ for s = 1:length(runs)
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).orth = 1;
 
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).name = 'switch_sim';
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).onset = (run_logs{1,s}.onset(run_logs{1,s}.condition == 1)/1000);
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).duration = 1;
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).tmod = 0;
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).orth = 1;
-
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(4).name = 'switch_alt';
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(4).onset = (run_logs{1,s}.onset(run_logs{1,s}.condition == -1)/1000);
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(4).duration = 1;
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(4).tmod = 0;
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(4).orth = 1;
-
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).multi = {''};
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).regress = struct('name', {}, 'val', {});
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).multi_reg = cellstr(spm_select('FPList', switch_dir,'^rp_.*\.txt$'));
