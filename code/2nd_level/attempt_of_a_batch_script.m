@@ -6,7 +6,7 @@
 
 matlabbatch{1}.spm.stats.factorial_design.dir = {'C:\Users\45040\Documents\MATLAB\ana_test\Practical\2nd_level_switch'};
 
-path_to_contrasts = uigetdir(pwd, "C:\Users\45040\Documents\MATLAB\ana_test\Practical\2nd_level_switch")
+path_to_contrasts = uigetdir(pwd, "C:\Users\45040\Documents\MATLAB\ana_test\Practical\2nd_level_switch");
 contrast_images = dir(fullfile(path_to_contrasts, '*.nii'));
 %%
 matlabbatch{1}.spm.stats.factorial_design.des.t1.scans = {contrast_images                                                          };
