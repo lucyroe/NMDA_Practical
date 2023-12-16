@@ -11,7 +11,7 @@
 %            contrasts
 %            outputdir
 
-% ALLES NOCH ANPASSEN!!!
+
 
 function glm_1stlevel_switch3reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec1, outputfolder_1stlevel_switch3reg)
 
@@ -30,32 +30,43 @@ matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t0 = 8;
 
 for s = 1:length(runs)
 
-    f_run_number = sprintf('%02d', s);
-    switch_dir = fullfile(datapath_nifti, ['run', f_run_number]);
+    current_run = runs{s};
+
+    switch_dir = fullfile(datapath_nifti, ['run', current_run]);
 
     smoothed_path = cellstr(spm_select('FPList', switch_dir, '^sw.*\.nii$'));
     smoothed_imgpaths{s} = cellfun(@(path) [path, ',1'], smoothed_path, 'UniformOutput', false);
 
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).scans = smoothed_imgpaths{s};
 
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(1).name = conditions_runs{2};
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(1).onset = (run_logs{1,s}.onset(run_logs{1,s}.condition == 1)/1000);
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(1).duration = run_logs{1,s}.duration(run_logs{1,s}.condition == 1);
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(1).name = conditions_runs{1};
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(1).onset = (run_logs{1,s}.onset(run_logs{1,s}.condition == -1)/1000);
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(1).duration = run_logs{1,s}.duration(run_logs{1,s}.condition == -1);
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(1).tmod = 0;
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(1).orth = 1;
-
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).name = conditions_runs{1};
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).onset = (run_logs{1,s}.onset(run_logs{1,s}.condition == -1)/1000);
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).duration = run_logs{1,s}.duration(run_logs{1,s}.condition == -1);
+ 
+    
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).name = conditions_runs{2};
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).onset = (run_logs{1,s}.onset(run_logs{1,s}.condition == 1)/1000);
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).duration = run_logs{1,s}.duration(run_logs{1,s}.condition == 1);
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).tmod = 0;
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(2).orth = 1;
+
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).name = 'switch';
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).onset = (run_logs{1,s}.onset /1000);
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).duration = 0 ; % regressor as a step function
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).tmod = 0;
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).orth = 1;
+
 
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).multi = {''};
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).regress = struct('name', {}, 'val', {});
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).multi_reg = cellstr(spm_select('FPList', switch_dir,'^rp_.*\.txt$'));
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).hpf = 128;
+
 
 end
 
@@ -76,17 +87,19 @@ matlabbatch{2}.spm.stats.fmri_est.method.Classical = 1;
 % CONTRAST MANAGER 
 matlabbatch{3}.spm.stats.con.spmmat = {[outputfolder_1stlevel_switch3reg filesep 'SPM.mat']};
 
-matlabbatch{3}.spm.stats.con.consess{1}.tcon.name = conditions_runs{2};
-matlabbatch{3}.spm.stats.con.consess{1}.tcon.weights = contrastvec1{1}; % phase sim
+matlabbatch{3}.spm.stats.con.consess{1}.tcon.name = conditions_runs{1};
+matlabbatch{3}.spm.stats.con.consess{1}.tcon.weights = contrastvec1{1}; % activation for alt (phase alt > sim)
 matlabbatch{3}.spm.stats.con.consess{1}.tcon.sessrep = 'none';
 
-matlabbatch{3}.spm.stats.con.consess{2}.tcon.name = conditions_runs{1};
-matlabbatch{3}.spm.stats.con.consess{2}.tcon.weights = contrastvec1{2}; % phase alt
+matlabbatch{3}.spm.stats.con.consess{2}.tcon.name = conditions_runs{2};
+matlabbatch{3}.spm.stats.con.consess{2}.tcon.weights = contrastvec1{2}; % activation for sim (phase sim > alt)
 matlabbatch{3}.spm.stats.con.consess{2}.tcon.sessrep = 'none';
 
-matlabbatch{3}.spm.stats.con.consess{3}.tcon.name = 'switch_oneregressor';
+matlabbatch{3}.spm.stats.con.consess{3}.tcon.name = 'switch';
 matlabbatch{3}.spm.stats.con.consess{3}.tcon.weights = contrastvec1{3}; % switch 
 matlabbatch{3}.spm.stats.con.consess{3}.tcon.sessrep = 'none';
+
+
 
 % Stats
 
@@ -131,6 +144,6 @@ fprintf('Computing 1st Level GLM\n')
 spm('defaults', 'FMRI');
 spm_jobman('run', matlabbatch)
 
-clear matlabbatch 
+clear matlabbatch
 
 
