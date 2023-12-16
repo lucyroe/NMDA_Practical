@@ -2,7 +2,7 @@
 Behavioral Analysis for NMDA Practical Bistable Tactile Perception
 
 Author: Lucy Roellecke
-Last Update: December 15, 2023
+Last Update: December 16, 2023
 """
 
 # %% Import
@@ -16,60 +16,86 @@ import seaborn as sns
 # %% Set global vars & paths >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o
 datapath = "/Users/Lucy/Documents/Berlin/FU/MCNB/3Semester/NMDA_Practical/data/"
 datafile = os.path.join(datapath, "BTAPE-Group-Data.csv")
-resultpath = "/Users/Lucy/Documents/Berlin/FU/MCNB/3Semester/NMDA_Practical/analysis/behavioral/"
-figuredir = "/Users/Lucy/Documents/Berlin/FU/MCNB/3Semester/NMDA_Practical/figures/behavioral/"
+resultpath = (
+    "/Users/Lucy/Documents/Berlin/FU/MCNB/3Semester/NMDA_Practical/analysis/behavioral/"
+)
+figuredir = (
+    "/Users/Lucy/Documents/Berlin/FU/MCNB/3Semester/NMDA_Practical/figures/behavioral/"
+)
 
-subjects = ["sub-001", "sub-002", "sub-003", 
-            "sub-004", "sub-005", "sub-006", 
-            "sub-007", "sub-008", "sub-009"]
+subjects = [
+    "sub-001",
+    "sub-002",
+    "sub-003",
+    "sub-004",
+    "sub-005",
+    "sub-006",
+    "sub-007",
+    "sub-008",
+    "sub-009",
+]
 
 runs = ["1", "2", "3", "4", "5", "6"]
 
+
 # %% Functions >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o
-def calculate_anova(data: pd.DataFrame, # data for anova
-                dependent_variable: str, # dependent variable in dataframe
-                subjects: str,  # subject variable in dataframe
-                within_factor: list[str]    # (list of) within factor(s) in dataframe
-                ) -> pd.DataFrame:
+def calculate_anova(
+    data: pd.DataFrame,  # data for anova
+    dependent_variable: str,  # dependent variable in dataframe
+    subjects: str,  # subject variable in dataframe
+    within_factor: list[str],  # (list of) within factor(s) in dataframe
+) -> pd.DataFrame:
     """Calculate repeated measures ANOVA for data."""
     # calculate rm anova
-    results = pg.rm_anova(dv=dependent_variable, 
-                    within=within_factor, 
-                    subject=subjects, 
-                    data=data, 
-                    detailed=True)
-    
+    results = pg.rm_anova(
+        dv=dependent_variable,
+        within=within_factor,
+        subject=subjects,
+        data=data,
+        detailed=True,
+    )
+
     # calculate post-hoc tests
-    post_hocs = pg.pairwise_ttests(dv=dependent_variable, 
-                                    within=within_factor, 
-                                    subject=subjects, 
-                                    padjust='fdr_bh', 
-                                    data=data)
+    post_hocs = pg.pairwise_ttests(
+        dv=dependent_variable,
+        within=within_factor,
+        subject=subjects,
+        padjust="fdr_bh",
+        data=data,
+    )
 
     return results, post_hocs
 
-def check_assumptions(data: pd.DataFrame,
-                    dependent_variable: str,
-                    subjects: str,
-                    within_factor: list[str]) -> pd.DataFrame:
+
+def check_assumptions(
+    data: pd.DataFrame, dependent_variable: str, subjects: str, within_factor: list[str]
+) -> pd.DataFrame:
     """Check assumptions for ANOVA."""
     # sphericity
-    sphericity_results = pg.sphericity(data=data, dv=dependent_variable, subject=subjects, within=within_factor)
+    sphericity_results = pg.sphericity(
+        data=data, dv=dependent_variable, subject=subjects, within=within_factor
+    )
     # normality of related groups (switches)
-    normality_results = pg.normality(data=data, dv=dependent_variable, group=within_factor[1])
+    normality_results = pg.normality(
+        data=data, dv=dependent_variable, group=within_factor[1]
+    )
     return sphericity_results, normality_results
 
-def plot_results(data: pd.DataFrame, # data for plotting
-                x: str, # x-axis variable
-                y: str, # y-axis variable
-                hue: str # hue variable
-                ) -> plt.figure:
+
+def plot_results(
+    data: pd.DataFrame,  # data for plotting
+    x: str,  # x-axis variable
+    y: str,  # y-axis variable
+    hue: str,  # hue variable
+) -> plt.figure:
     """Plot results."""
     # plot data
     color_palette_boxes = ["#E69F00", "#56B4E9"]
     color_palette_points = ["#D55E00", "#0072B2"]
     figure, axes = plt.subplots(figsize=(5, 4))
-    sns.boxplot(data=data, x=x, y=y, hue=hue, palette=color_palette_boxes, ax=axes, fliersize=0)
+    sns.boxplot(
+        data=data, x=x, y=y, hue=hue, palette=color_palette_boxes, ax=axes, fliersize=0
+    )
     sns.stripplot(data=data, x=x, y=y, palette=color_palette_points, ax=axes)
     # set labels of legend
     handles, labels = axes.get_legend_handles_labels()
@@ -110,18 +136,18 @@ if __name__ == "__main__":
     sex_all.append("")
 
     # add descriptives to dataframe
-    data_descriptives = pd.DataFrame({"Subject": subject_all,
-                                    "Age": age_all,
-                                    "Sex": sex_all,
-                                    "EDI": edi_all})
+    data_descriptives = pd.DataFrame(
+        {"Subject": subject_all, "Age": age_all, "Sex": sex_all, "EDI": edi_all}
+    )
 
     # export descriptives to csv
     data_descriptives.to_csv(os.path.join(resultpath, "descriptives.csv"))
-    
+
     # format data for anova
     # create empty dataframe
-    anova_data = pd.DataFrame({"Subject": [],
-    "Run": [], "Switch To": [], "Number of Switches": []})
+    anova_data = pd.DataFrame(
+        {"Subject": [], "Run": [], "Switch To": [], "Number of Switches": []}
+    )
 
     # loop through subjects
     for index, subject in enumerate(subjects):
@@ -135,16 +161,16 @@ if __name__ == "__main__":
             run_value_sim = subject_data[f"S{run}"][index]
 
             # add values to dataframe
-            row_index = index*2*len(runs) + row*2
+            row_index = index * 2 * len(runs) + row * 2
             anova_data.loc[row_index, "Subject"] = subject
             anova_data.loc[row_index + 1, "Subject"] = subject
             anova_data.loc[row_index, "Run"] = run
             anova_data.loc[row_index + 1, "Run"] = run
-            anova_data.loc[row_index, "Switch To"] = 1    # alternating
-            anova_data.loc[row_index + 1, "Switch To"] = 2    # simultaneous
+            anova_data.loc[row_index, "Switch To"] = 1  # alternating
+            anova_data.loc[row_index + 1, "Switch To"] = 2  # simultaneous
             anova_data.loc[row_index, "Number of Switches"] = run_value_alt
             anova_data.loc[row_index + 1, "Number of Switches"] = run_value_sim
-    
+
     # sort data by subject number
     anova_data = anova_data.sort_values(by=["Subject", "Run"])
 
@@ -152,23 +178,31 @@ if __name__ == "__main__":
     anova_data.to_csv(os.path.join(resultpath, "rm_anova_data.csv"))
 
     # check assumptions for anova
-    sphericity_results, normality_results = check_assumptions(anova_data, "Number of Switches", "Subject", ["Run","Switch To"])
+    sphericity_results, normality_results = check_assumptions(
+        anova_data, "Number of Switches", "Subject", ["Run", "Switch To"]
+    )
     # turn results into dataframe
     sphericity_results_list = list(sphericity_results)
-    sphericity_results_dict= {"W": str(sphericity_results_list[1]), 
-                                    "chi2": str(sphericity_results_list[2]),
-                                    "dof": str(sphericity_results_list[3]),
-                                    "pval": str(sphericity_results_list[4]), 
-                                    "spher": str(sphericity_results_list[0])}
+    sphericity_results_dict = {
+        "W": str(sphericity_results_list[1]),
+        "chi2": str(sphericity_results_list[2]),
+        "dof": str(sphericity_results_list[3]),
+        "pval": str(sphericity_results_list[4]),
+        "spher": str(sphericity_results_list[0]),
+    }
     sphericity_results_dataframe = pd.DataFrame(sphericity_results_dict, index=[0])
-    assumptions_results = pd.concat([sphericity_results_dataframe, normality_results], axis=1)
+    assumptions_results = pd.concat(
+        [sphericity_results_dataframe, normality_results], axis=1
+    )
     # add a column with assumption names
     assumptions_results["Assumption"] = ["Sphericity", "Normality", "Normality"]
     # export assumptions results to csv
     assumptions_results.to_csv(os.path.join(resultpath, "rm_anova_assumptions.csv"))
-    
+
     # calculate anova
-    anova_results, post_hocs = calculate_anova(anova_data, "Number of Switches", "Subject", ["Run","Switch To"])
+    anova_results, post_hocs = calculate_anova(
+        anova_data, "Number of Switches", "Subject", ["Run", "Switch To"]
+    )
 
     # export anova results to csv
     anova_results.to_csv(os.path.join(resultpath, "rm_anova_results.csv"))
@@ -177,23 +211,32 @@ if __name__ == "__main__":
     # add descriptives to dataframe
     anova_data.loc[row_index + 2, "Run"] = "Mean"
     anova_data.loc[row_index + 3, "Run"] = "Mean"
-    anova_data.loc[row_index + 2, "Switch To"] = 1    # alternating
-    anova_data.loc[row_index + 3, "Switch To"] = 2    # simultaneous
-    anova_data.loc[row_index + 2, "Number of Switches"] = np.mean(anova_data["Number of Switches"][anova_data["Switch To"] == 1])
-    anova_data.loc[row_index + 3, "Number of Switches"] = np.mean(anova_data["Number of Switches"][anova_data["Switch To"] == 2])
+    anova_data.loc[row_index + 2, "Switch To"] = 1  # alternating
+    anova_data.loc[row_index + 3, "Switch To"] = 2  # simultaneous
+    anova_data.loc[row_index + 2, "Number of Switches"] = np.mean(
+        anova_data["Number of Switches"][anova_data["Switch To"] == 1]
+    )
+    anova_data.loc[row_index + 3, "Number of Switches"] = np.mean(
+        anova_data["Number of Switches"][anova_data["Switch To"] == 2]
+    )
     anova_data.loc[row_index + 4, "Run"] = "Std"
     anova_data.loc[row_index + 5, "Run"] = "Std"
-    anova_data.loc[row_index + 4, "Switch To"] = 1    # alternating
-    anova_data.loc[row_index + 5, "Switch To"] = 2    # simultaneous
-    anova_data.loc[row_index + 4, "Number of Switches"] = np.std(anova_data["Number of Switches"][anova_data["Switch To"] == 1])
-    anova_data.loc[row_index + 5, "Number of Switches"] = np.std(anova_data["Number of Switches"][anova_data["Switch To"] == 2])
+    anova_data.loc[row_index + 4, "Switch To"] = 1  # alternating
+    anova_data.loc[row_index + 5, "Switch To"] = 2  # simultaneous
+    anova_data.loc[row_index + 4, "Number of Switches"] = np.std(
+        anova_data["Number of Switches"][anova_data["Switch To"] == 1]
+    )
+    anova_data.loc[row_index + 5, "Number of Switches"] = np.std(
+        anova_data["Number of Switches"][anova_data["Switch To"] == 2]
+    )
 
     # export descriptive statistics to csv
     anova_data.to_csv(os.path.join(resultpath, "descriptives_data.csv"))
 
-
     # plot anova results
-    anova_figure = plot_results(anova_data, "Switch To", "Number of Switches", "Switch To")
+    anova_figure = plot_results(
+        anova_data, "Switch To", "Number of Switches", "Switch To"
+    )
 
     # save plot to file
     anova_figure.savefig(os.path.join(figuredir, "anova_results.pdf"))
