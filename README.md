@@ -1,6 +1,6 @@
 # NMDA Practical: Bistable Tactile Perception
 
-`[Last update: December 13, 2023]`
+`[Last update: December 16, 2023]`
 
     Period:     2023-10 - 2023-12
     Status:     work in progress
@@ -42,6 +42,7 @@ This repository contains all code and ressources concerning the Neurocognitive M
 ## To Dos
 
 - [ ] write a more meaningful project structure paragraph
+- [ ] clean up folder structure + add to project structure paragraph
 
 ## Contributors/Collaborators
 
