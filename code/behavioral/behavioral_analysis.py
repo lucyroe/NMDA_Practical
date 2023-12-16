@@ -146,7 +146,7 @@ if __name__ == "__main__":
     # format data for anova
     # create empty dataframe
     anova_data = pd.DataFrame(
-        {"Subject": [], "Run": [], "Switch To": [], "Number of Switches": []}
+        {"Subject": [], "Run": [], "Switch To": [], "Number of Blinks": []}
     )
 
     # loop through subjects
@@ -168,8 +168,8 @@ if __name__ == "__main__":
             anova_data.loc[row_index + 1, "Run"] = run
             anova_data.loc[row_index, "Switch To"] = 1  # alternating
             anova_data.loc[row_index + 1, "Switch To"] = 2  # simultaneous
-            anova_data.loc[row_index, "Number of Switches"] = run_value_alt
-            anova_data.loc[row_index + 1, "Number of Switches"] = run_value_sim
+            anova_data.loc[row_index, "Number of Blinks"] = run_value_alt
+            anova_data.loc[row_index + 1, "Number of Blinks"] = run_value_sim
 
     # sort data by subject number
     anova_data = anova_data.sort_values(by=["Subject", "Run"])
@@ -179,7 +179,7 @@ if __name__ == "__main__":
 
     # check assumptions for anova
     sphericity_results, normality_results = check_assumptions(
-        anova_data, "Number of Switches", "Subject", ["Run", "Switch To"]
+        anova_data, "Number of Blinks", "Subject", ["Run", "Switch To"]
     )
     # turn results into dataframe
     sphericity_results_list = list(sphericity_results)
@@ -201,7 +201,7 @@ if __name__ == "__main__":
 
     # calculate anova
     anova_results, post_hocs = calculate_anova(
-        anova_data, "Number of Switches", "Subject", ["Run", "Switch To"]
+        anova_data, "Number of Blinks", "Subject", ["Run", "Switch To"]
     )
 
     # export anova results to csv
@@ -213,21 +213,21 @@ if __name__ == "__main__":
     anova_data.loc[row_index + 3, "Run"] = "Mean"
     anova_data.loc[row_index + 2, "Switch To"] = 1  # alternating
     anova_data.loc[row_index + 3, "Switch To"] = 2  # simultaneous
-    anova_data.loc[row_index + 2, "Number of Switches"] = np.mean(
-        anova_data["Number of Switches"][anova_data["Switch To"] == 1]
+    anova_data.loc[row_index + 2, "Number of Blinks"] = np.mean(
+        anova_data["Number of Blinks"][anova_data["Switch To"] == 1]
     )
-    anova_data.loc[row_index + 3, "Number of Switches"] = np.mean(
-        anova_data["Number of Switches"][anova_data["Switch To"] == 2]
+    anova_data.loc[row_index + 3, "Number of Blinks"] = np.mean(
+        anova_data["Number of Blinks"][anova_data["Switch To"] == 2]
     )
     anova_data.loc[row_index + 4, "Run"] = "Std"
     anova_data.loc[row_index + 5, "Run"] = "Std"
     anova_data.loc[row_index + 4, "Switch To"] = 1  # alternating
     anova_data.loc[row_index + 5, "Switch To"] = 2  # simultaneous
-    anova_data.loc[row_index + 4, "Number of Switches"] = np.std(
-        anova_data["Number of Switches"][anova_data["Switch To"] == 1]
+    anova_data.loc[row_index + 4, "Number of Blinks"] = np.std(
+        anova_data["Number of Blinks"][anova_data["Switch To"] == 1]
     )
-    anova_data.loc[row_index + 5, "Number of Switches"] = np.std(
-        anova_data["Number of Switches"][anova_data["Switch To"] == 2]
+    anova_data.loc[row_index + 5, "Number of Blinks"] = np.std(
+        anova_data["Number of Blinks"][anova_data["Switch To"] == 2]
     )
 
     # export descriptive statistics to csv
@@ -235,7 +235,7 @@ if __name__ == "__main__":
 
     # plot anova results
     anova_figure = plot_results(
-        anova_data, "Switch To", "Number of Switches", "Switch To"
+        anova_data, "Switch To", "Number of Blinks", "Switch To"
     )
 
     # save plot to file
