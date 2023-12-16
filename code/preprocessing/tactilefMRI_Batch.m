@@ -18,7 +18,7 @@ spmpath = fullfile('/Users/denisekittelmann/Documents/MATLAB/Toolbox/spm12');
 % change to where you downloaded the spm toolbox
 addpath(scriptpath, datapath, resultspath, spmpath)  % add script, data and spm path; 
 
-steps = {'3'}; 
+steps = {'2','3'}; 
 % '1', '2', '3', '4', '5'};    % analysis steps to be performed
 %   1:   Preprocessing
 %   2:   Localizer Analysis
@@ -159,8 +159,8 @@ for sub_number=1:length(subjects)
             epoduration = 8; 
 
             % define contrast vector 
-            contrastvec = {[1 0 0 0 0 0 0 0], ... 
-                           [0 1 0 0 0 0 0 0], ...
+            contrastvec = {[1 0 0 0 0 0 0 0 0], ... 
+                           [0 1 0 0 0 0 0 0 0], ...
                            [0 0 1 0 0 0 0 0 0], ...
                            [1 0 -1 0 0 0 0 0 0], ...
                            [0 1 -1 0 0 0 0 0 0], ...
@@ -192,40 +192,21 @@ for sub_number=1:length(subjects)
 
 
             % define contrast vector 
-           contrastvec0 = {[1 -1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ...
-                             0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0], ...% Phase sim > alt (-1 1)
-                            [0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 ...
-                             0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0], ... % Phase alt > sim (1 -1)
-                            [1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 ...
-                             1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 0], ... % Switch alt to sim
-                            [-1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 ...
-                             -1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0],...  % Switch sim to alt
-                            [1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ...
-                             1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 ]... % Switch as one regressor
-                             }; 
- 
+      
 
+            contrastvec1 = {[1 -1 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 ...
+                             1 -1 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 0] ... % activation for alt: alt > sim
+                            [-1 1 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 ...
+                             -1 1 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0] ... % activation for sim: sim > alt 
+                            [0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 ...
+                             0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0] ... % switch
+                             };
 
-
-            contrastvec1 = {[1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 ... % Sim
-                            1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0] ...
-                            [0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 ... % Alt
-                            0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0] ...
-                            [1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 ...
-                             1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0]...% Switch as one regressor
-                            [1 -1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0  ...
-                            1 -1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0 1 -1 0 0 0 0 0 0], ...% Phase sim > alt 
-                            [-1 1 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 ...
-                             -1 1 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 -1 1 0 0 0 0 0 0], ... % Phase alt > sim
-                             }; 
-            
 
             % define outputfolder
-            %outputfolder_1stlevel_switch4reg = fullfile(resultspath, '1stlevel_switch');
             outputfolder_1stlevel_switch3reg = fullfile(resultspath, '1stlevel_switch_3reg');
 
             % compute 1st level GLM
-            %glm_1stlevel_switch4reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec0, outputfolder_1stlevel_switch4reg)
             glm_1stlevel_switch3reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec1, outputfolder_1stlevel_switch3reg)
     
         elseif step == '4'
