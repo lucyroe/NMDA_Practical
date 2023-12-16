@@ -10,21 +10,26 @@ conditions_runs = {'alternating', 'simulatenous'};  % conditions in the runs
 conditions_localizer = {'left_stimulation', 'right_stimulation', ...
     'baseline'};  % conditions in the localizer
 
-scriptpath = fullfile('/Users/denisekittelmann/Documents/MATLAB/BTAPE/code/');   
+scriptpath = fullfile('/Users/Lucy/Documents/Berlin/FU/MCNB/3Semester/NMDA_Practical/code/');
+preprocessing_scriptpath = fullfile(scriptpath, 'preprocessing/');
+first_level_scriptpath = fullfile(scriptpath, '1st_level/');
+second_level_scriptpath = fullfile(scriptpath, '2nd_level/');
 % change to where the scripts are for you
-datapath = fullfile('/Users/denisekittelmann/Documents/MATLAB/BTAPE/data/');  % change to where data is for you
-resultspath = fullfile('/Users/denisekittelmann/Documents/MATLAB/BTAPE/results/');
-spmpath = fullfile('/Users/denisekittelmann/Documents/MATLAB/Toolbox/spm12');  
+datapath = fullfile('/Users/Lucy/Documents/Berlin/FU/MCNB/3Semester/NMDA_Practical/data/');  % change to where data is for you
+resultspath = fullfile('/Users/Lucy/Documents/Berlin/FU/MCNB/3Semester/NMDA_Practical/analysis/');
+spmpath = fullfile('/Users/Lucy/Documents/MATLAB/spm12/'); 
+BrainSlicerpath = fullfile('/Users/Lucy/Documents/MATLAB/brainslicer/');
 % change to where you downloaded the spm toolbox
-addpath(scriptpath, datapath, resultspath, spmpath)  % add script, data and spm path; 
+addpath(scriptpath, preprocessing_scriptpath, first_level_scriptpath, ...
+    second_level_scriptpath, ...
+    datapath, resultspath, spmpath, BrainSlicerpath)  % add script, data and spm path; 
 
 steps = {'2','3'}; 
 % '1', '2', '3', '4', '5'};    % analysis steps to be performed
 %   1:   Preprocessing
 %   2:   Localizer Analysis
 %   3:   First Level Analysis - Contrasts Alternating / Simultaneous
-%   4:   Decoding
-%   5:   Group Level Analysis
+%   4:   Group Level Analysis
 
 spm('defaults', 'FMRI');    % setup spm
 spm_jobman('initcfg');  % initialize spm
@@ -69,12 +74,6 @@ for sub_number=1:length(subjects)
                 % REALIGNMENT (motion correction) of epi images
                 % prefix "r"
                 realigned_images = realign_job(functional_images); 
-                % this does not realign images as we need seperate cells
-                % for each run in order for this to work (as each run is
-                % realigned in relation to all the other runs)
-                % TO DO: change this so we have one cell array with seven
-                % cells for all runs (create separate run loop) and only
-                % then realign all the images
                 
                 % CO-REGISTRATION puts t1 and (mean) epi image in the same 
                 % space
@@ -142,19 +141,18 @@ for sub_number=1:length(subjects)
             % read in logfiles for localizer
             
             localizer_log = readtable(fullfile(subject_datapath, ...
-                'log_files', sprintf('log_sub-%s_localizer.tsv', ...
+                'log_files', sprintf('log_sub-%s_localizer.txt', ...
                 subject)), "Delimiter", '\t', 'FileType', 'text');
 
             datapath_nifti = fullfile(datapath, sprintf('sub-%s', ...
                 subject), 'nifti_files');
             
-            localizer_dir = fullfile(datapath_nifti, 'run07');
+            localizer_dir = fullfile(datapath_nifti, 'localizer');
 
             % get smoothed images
             smoothed_imgpath = cellstr(spm_select('FPList', localizer_dir, '^sw.*\.nii$'));
             smoothed_imgpath = cellfun(@(path) [path, ',1'], smoothed_imgpath, 'UniformOutput', false);
 
-            
             % epoch duration 
             epoduration = 8; 
 
@@ -168,7 +166,7 @@ for sub_number=1:length(subjects)
                            [-1 1 0 0 0 0 0 0 0]};
 
             % define outputfolder
-            outputfolder_1stlevel_loc = fullfile(resultspath, '1stlevel_localizer'); 
+            outputfolder_1stlevel_loc = fullfile(resultspath, '1st_level', '1stlevel_localizer_FINAL'); 
 
             % GLM 1stLEVEL LOCALIZER 
             glm_1stlevel_localizer_job(smoothed_imgpath, localizer_log, localizer_dir, epoduration, conditions_localizer, contrastvec, outputfolder_1stlevel_loc)
@@ -185,7 +183,7 @@ for sub_number=1:length(subjects)
 
             for run_number = 1:length(runs)
                 run_log = readtable(fullfile(subject_datapath, ...
-                    'log_files', sprintf('log_sub-%s_run-%d.tsv', subject, run_number)), ...
+                    'log_files', sprintf('log_sub-%s_run-%d.txt', subject, run_number)), ...
                     'Delimiter', '\t', 'FileType', 'text');
                 run_logs{run_number} = run_log;
             end
@@ -204,16 +202,13 @@ for sub_number=1:length(subjects)
 
 
             % define outputfolder
-            outputfolder_1stlevel_switch3reg = fullfile(resultspath, '1stlevel_switch_3reg');
+            outputfolder_1stlevel_switch3reg = fullfile(resultspath, '1st_level', '1stlevel_switch_3reg_FINAL');
 
             % compute 1st level GLM
             glm_1stlevel_switch3reg_job(datapath_nifti, runs, run_logs, conditions_runs, contrastvec1, outputfolder_1stlevel_switch3reg)
     
         elseif step == '4'
-        %% (STEP 4: DECODING) --------------------------------------------
-            
-        elseif step == '5'
-        %% (STEP 5: GROUP LEVEL ANALYSIS) --------------------------------
+        %% (STEP 4: GROUP LEVEL ANALYSIS) --------------------------------
 
         end
     end

@@ -1,0 +1,7 @@
+TrialNr	onset	condition	duration	offsetA	offsetS
+1	0.8	-1	60	2	2
+2	60.8	1	60	2	2
+3	120.8	-1	60	2	2
+4	180.8	1	60	2	2
+5	240.8	-1	60	2	2
+6	300.8	1	58.4	2	2
