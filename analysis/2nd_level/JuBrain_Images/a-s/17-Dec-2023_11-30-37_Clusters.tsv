@@ -1,0 +1,66 @@
+SPM: alternating [p<0.01 (unc.), k=50]
+
+Cluster 1 	171 vox	 +22	-14	+54
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area 6d1	26.0	2.7
+Area 6d3	2.6	0.5
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area 6d1	29.3	22.9	1.28	1.23	1.32
+Area 6d3	14.2	20.4	0.69	0.66	0.74
+Area 6d2	4.3	19.1	0.23	0.21	0.25
+Area 4p	0.4	14.1	0.03	0.01	0.05
+Area 3a	0.1	15.7	0.00	0.00	0.01
+Area 4a	0.1	18.6	0.01	0.00	0.01
+
+Top probabilites at peak voxels	Union across peaks
+Area 6d1	0.6
+Area 6d3	0.3
+Area 6d2	0.1
+
+Probabilities at local maxima	+22.0 / -14.0 / +54.0 (Height: 4.6)	+32.0 / -10.0 / +64.0 (Height: 3.4)
+Area 6d1	45.3	28.4
+Area 6d3	32.6	0.0
+Area 6d2	0.0	13.2
+
+
+Reference List
+
+Area 6d1
+https://doi.org/10.25493/4WSQ-8FM
+
+Area 6d2
+https://doi.org/10.25493/KXHS-N90
+
+Area 6d3
+https://doi.org/10.25493/NVJ5-JJ
+
+Area 3a
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+Area 4a
+S. Geyer, A. Ledberg, A. Schleicher, S. Kinomura, T. Schormann, U.B¸rgel, T.Klingberg, J. Larsson, K.Zilles, P.E. Roland. Two different areas within the primary motor cortex of man, Nature 382: 805-807, 1996
+
+Area 4p
+S. Geyer, A. Ledberg, A. Schleicher, S. Kinomura, T. Schormann, U.B¸rgel, T.Klingberg, J. Larsson, K.Zilles, P.E. Roland. Two different areas within the primary motor cortex of man, Nature 382: 805-807, 1996
+
+
+
+
+Cluster 2 	165 vox	 +26	+20	+22
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+
+Top probabilites at peak voxels	Union across peaks
+
+Probabilities at local maxima
+
+
+Reference List
+
+
+
+

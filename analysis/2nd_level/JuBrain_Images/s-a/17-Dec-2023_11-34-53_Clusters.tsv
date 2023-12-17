@@ -1,0 +1,514 @@
+SPM: simultaneous [p<0.01 (unc.), k=50]
+
+Cluster 1 	4687 vox	 +36	-84	+18
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area hOc4lp	15.7	55.3
+Area hOc2 [V2]	13.0	25.2
+Area hOc1 [V1]	12.0	16.3
+Area hOc4la	9.7	31.4
+Area hOc3d [V3d]	7.6	25.8
+Area hOc3v [V3v]	5.3	16.1
+Area hOc4v [V4(v)]	3.3	11.9
+Area hOc4d [V3A]	3.0	15.9
+Area FG2	2.4	15.9
+Area FG1	0.6	5.6
+Area hIP4 (IPS)	0.4	3.7
+Area hIP7 (IPS)	0.3	2.5
+Area hOc5 [V5/MT]	0.2	4.5
+Area FG4	0.0	0.0
+Area PGp (IPL)	0.0	0.0
+Area hPO1 (IPS)	0.0	0.0
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area hOc4lp	34.2	25.3	1.35	1.33	1.37
+Area hOc2 [V2]	26.7	23.0	1.16	1.14	1.18
+Area hOc1 [V1]	36.4	36.5	1.00	0.98	1.01
+Area hOc4la	37.8	27.4	1.38	1.35	1.41
+Area hOc3d [V3d]	23.7	23.0	1.03	1.01	1.05
+Area hOc3v [V3v]	19.3	24.2	0.80	0.78	0.81
+Area hOc4v [V4(v)]	19.0	25.7	0.74	0.72	0.76
+Area hOc4d [V3A]	18.9	20.7	0.92	0.90	0.94
+Area FG2	24.9	19.8	1.26	1.22	1.29
+Area FG1	15.1	19.4	0.78	0.73	0.82
+Area hOc5 [V5/MT]	13.1	16.9	0.77	0.73	0.82
+Area hIP4 (IPS)	11.3	18.0	0.63	0.58	0.67
+Area FG4	8.8	24.6	0.36	0.34	0.38
+Area hIP7 (IPS)	10.7	17.5	0.61	0.57	0.66
+Area hPO1 (IPS)	8.2	20.6	0.40	0.35	0.44
+Area PGp (IPL)	3.5	25.2	0.14	0.11	0.17
+Area FG3	1.1	23.5	0.05	0.03	0.06
+Area 7M (SPL)	0.1	19.0	0.01	0.01	0.01
+
+Top probabilites at peak voxels	Union across peaks
+Area hOc4lp	1.0
+Area hOc3d [V3d]	0.9
+Area hOc2 [V2]	0.9
+Area hOc4d [V3A]	0.8
+Area hOc4la	0.7
+Area hIP4 (IPS)	0.3
+Area hOc1 [V1]	0.2
+Area hOc3v [V3v]	0.0
+Area hOc4v [V4(v)]	0.0
+
+Probabilities at local maxima	+36.0 / -84.0 / +18.0 (Height: 16)	-22.0 / -98.0 / +14.0 (Height: 9.9)	-42.0 / -86.0 / -2.0 (Height: 8.6)	-40.0 / -88.0 / +0.0 (Height: 7.6)	-32.0 / -92.0 / +14.0 (Height: 7.3)	-28.0 / -94.0 / +14.0 (Height: 7.1)	-18.0 / -100.0 / +12.0 (Height: 7)	+36.0 / -88.0 / +6.0 (Height: 6.9)	-12.0 / -102.0 / +14.0 (Height: 6.7)	+34.0 / -90.0 / +8.0 (Height: 6.7)
+Area hOc4lp	37.0	4.7	33.3	59.3	72.2	43.9	0.0	72.6	0.0	48.1
+Area hOc3d [V3d]	0.0	61.9	0.0	0.0	0.0	15.8	54.1	0.2	9.3	14.7
+Area hOc2 [V2]	0.0	7.4	0.0	0.0	0.0	1.3	38.6	0.0	74.1	0.0
+Area hOc4d [V3A]	0.0	9.5	0.0	0.0	27.8	37.6	0.0	7.5	0.0	36.7
+Area hOc4la	0.1	0.0	57.5	23.4	0.0	0.0	0.0	0.0	0.0	0.0
+Area hIP4 (IPS)	34.4	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+Area hOc1 [V1]	0.0	0.0	0.0	0.0	0.0	0.0	0.4	0.0	16.6	0.0
+Area hOc3v [V3v]	0.0	0.7	0.0	0.5	0.0	0.0	0.0	0.0	0.0	0.0
+Area hOc4v [V4(v)]	0.0	0.0	0.3	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+
+
+Reference List
+
+Area hOc5 [V5/MT]
+A. Malikovic, K. Amunts, A. Schleicher, H. Mohlberg, S.B. Eickhoff, M.Wilms, N. Palomero-Gallagher, E. Armstrong, K. Zilles. Cytoarchitectonic analysis of the human extrastriate cortex in the region of V5/MT+: A probabilistic, stereotaxic map of area hOc5, Cereb Cortex 17 (3): 562-574, 2007
+
+Area hOc4d [V3A]
+M. Kujovic, K. Zilles, A. Malikovic, A.  Schleicher, H. Mohlberg, C. Rottschy, S.B. Eickhoff, K. Amunts. Cytoarchitectonic mapping of the human dorsal extrastriate cortex. Brain Struct. Funct. 218 (1): 157-172, 2013.
+
+Area hPO1 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hOc3v [V3v]
+C. Rottschy, S.B. Eickhoff, A. Schleicher, H. Mohlberg, K. Zilles, K. Amunts. The ventral visual cortex in humans: Cytoarchitectonic mapping of two extrastriate areas. Human Brain Mapping 28 (1): 1-8, 2007
+
+Area FG3
+S. Lorenz, K.S. Weiner, J. Caspers, H. Mohlberg, A. Schleicher, S. Bludau, S.B. Eickhoff, K. Grill-Spector, K. Zilles, K. Amunts. Two new cytoarchitectonic areas on the human mid-fusiform gyrus. Cerebral Cortex 27 (1): 373-385, 2017.
+
+Area hOc4v [V4(v)]
+C. Rottschy, S.B. Eickhoff, A. Schleicher, H. Mohlberg, K. Zilles, K. Amunts. The ventral visual cortex in humans: Cytoarchitectonic mapping of two extrastriate areas. Human Brain Mapping 28 (1): 1-8, 2007
+
+Area FG1
+J. Caspers, K. Zilles, S.B. Eickhoff, A. Schleicher, H. Mohlberg, K. Amunts. Cytoarchitectonical analysis and probabilistic mapping of two extrastriate areas of the human posterior fusiform gyrus. Brain Structure and Function 218: 511-526, 2013.
+
+Area hOc3d [V3d]
+M. Kujovic, K. Zilles, A. Malikovic, A.  Schleicher, H. Mohlberg, C. Rottschy, S.B. Eickhoff, K. Amunts. Cytoarchitectonic mapping of the human dorsal extrastriate cortex. Brain Struct. Funct. 218 (1): 157-172, 2013.
+
+Area PGp (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area hIP4 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hOc4la
+A. Malikovic, K. Amunts, A. Schleicher, H. Mohlberg, M. Kujovic, S.E. Eickhoff, K. Zilles. Cytoarchitecture of the human lateral occipital cortex: Mapping of two extrastriate areas hOc4la and hOc4lp. Brain Structure and Function, 221(4):1877-97, 2016.
+
+Area FG2
+J. Caspers, K. Zilles, S.B. Eickhoff, A. Schleicher, H. Mohlberg, K. Amunts. Cytoarchitectonical analysis and probabilistic mapping of two extrastriate areas of the human posterior fusiform gyrus. Brain Structure and Function 218: 511-526, 2013.
+
+Area 7M (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area hOc1 [V1]
+K. Amunts, A. Malikovic, H.Mohlberg, T.Schormann, K. Zilles. Brodmann's areas 17 and 18 brought into stereotaxic space - where and how variable? NeuroImage 11: 66-84, 2000
+
+Area hOc4lp
+A. Malikovic, K. Amunts, A. Schleicher, H. Mohlberg, M. Kujovic, S.E. Eickhoff, K. Zilles. Cytoarchitecture of the human lateral occipital cortex: Mapping of two extrastriate areas hOc4la and hOc4lp. Brain Structure and Function, 221(4):1877-97, 2016.
+
+Area FG4
+S. Lorenz, K.S. Weiner, J. Caspers, H. Mohlberg, A. Schleicher, S. Bludau, S.B. Eickhoff, K. Grill-Spector, K. Zilles, K. Amunts. Two new cytoarchitectonic areas on the human mid-fusiform gyrus. Cerebral Cortex 27 (1): 373-385, 2017.
+
+Area hIP7 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hOc2 [V2]
+K. Amunts, A. Malikovic, H.Mohlberg, T.Schormann, K. Zilles. Brodmann's areas 17 and 18 brought into stereotaxic space - where and how variable? NeuroImage 11: 66-84, 2000
+
+
+
+
+Cluster 2 	309 vox	 +32	-20	-10
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Amygdala (CM)	5.3	12.7
+CA1 (Hippocampus)	3.6	1.0
+DG (Hippocampus)	1.1	0.8
+BF (Ch 4)	0.3	1.4
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+CA1 (Hippocampus)	29.0	25.0	1.16	1.06	1.24
+Amygdala (CM)	19.4	13.6	1.43	1.29	1.56
+DG (Hippocampus)	15.6	17.3	0.90	0.79	1.04
+BF (Ch 4)	8.7	12.0	0.72	0.64	0.80
+Amygdala (IF)	7.6	10.4	0.73	0.65	0.81
+Amygdala (LB)	5.0	22.6	0.22	0.18	0.26
+Amygdala (MF)	6.9	9.7	0.71	0.56	0.84
+Amygdala (SF)	4.6	18.8	0.24	0.18	0.30
+Amygdala (VTM)	4.2	10.4	0.40	0.28	0.54
+Area Id5	4.0	20.2	0.20	0.04	0.36
+Subiculum	0.4	23.5	0.02	0.01	0.03
+Area Id1 	0.1	16.4	0.01	0.00	0.01
+Area Id6	0.0	24.9	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+Amygdala (CM)	0.5
+BF (Ch 4)	0.5
+CA1 (Hippocampus)	0.3
+Amygdala (IF)	0.1
+Amygdala (VTM)	0.1
+Amygdala (MF)	0.1
+DG (Hippocampus)	0.1
+Amygdala (LB)	0.0
+
+Probabilities at local maxima	+32.0 / -20.0 / -10.0 (Height: 7.8)	+24.0 / -6.0 / -12.0 (Height: 4.5)	+24.0 / -2.0 / -10.0 (Height: 4)	+22.0 / +4.0 / -10.0 (Height: 3.5)
+Amygdala (CM)	0.0	33.3	28.8	0.0
+BF (Ch 4)	0.0	22.0	30.2	4.3
+CA1 (Hippocampus)	27.9	0.0	0.0	0.0
+Amygdala (IF)	0.0	10.0	1.4	0.0
+Amygdala (VTM)	0.0	5.5	0.0	0.0
+Amygdala (MF)	0.0	5.2	0.1	0.0
+DG (Hippocampus)	5.1	0.0	0.0	0.0
+Amygdala (LB)	0.0	4.4	0.0	0.0
+
+
+Reference List
+
+Amygdala (MF)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Area Id6
+https://doi.org/10.25493/54HZ-KFQ
+
+BF (Ch 4)
+L. Zaborszky, L. Hoemke, H. Mohlberg, A. Schleicher, K. Amunts, and K. Zilles. Stereotaxic probabilistic maps of the magnocellular cell groups in human basal forebrain. Neuroimage 42 (3):1127-1141, 2008.
+
+CA1 (Hippocampus)
+K. Amunts, O. Kedo., M. Kindler., P. Pieperhoff., F. Schneider, H. Mohlberg, U. Habel, J.N. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005 
+
+Amygdala (CM)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Amygdala (SF)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Amygdala (VTM)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Area Id1 
+F. Kurth, S. B. Eickhoff, A. Schleicher, L. Hoemke, K. Zilles, and K. Amunts. Cytoarchitecture and probabilistic maps of the human posterior insular cortex. Cereb.Cortex 20 (6):1448-1461, 2009.
+
+Subiculum
+K. Amunts, O. Kedo., M. Kindler., P. Pieperhoff., F. Schneider, H. Mohlberg, U. Habel, J.N. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005 
+
+DG (Hippocampus)
+K. Amunts, O. Kedo., M. Kindler., P. Pieperhoff., F. Schneider, H. Mohlberg, U. Habel, J.N. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005 
+
+Amygdala (LB)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Amygdala (IF)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Area Id5
+https://doi.org/10.25493/5CK1-B1G
+
+
+
+
+Cluster 3 	186 vox	 -40	-6	+62
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area 44	0.7	0.2
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area 44	16.2	18.7	0.86	0.82	0.93
+Area 4a	4.5	18.6	0.24	0.21	0.27
+Area 1	9.1	20.4	0.45	0.37	0.52
+Area 6d1	2.0	22.9	0.09	0.07	0.11
+Area 3b	7.5	19.4	0.38	0.27	0.50
+Area 45	7.3	21.7	0.34	0.22	0.46
+Area 6d2	2.0	19.1	0.10	0.07	0.14
+
+Top probabilites at peak voxels	Union across peaks
+Area 44	0.4
+Area 1	0.1
+Area 4a	0.0
+Area 6d2	0.0
+Area 6d1	0.0
+
+Probabilities at local maxima	-40.0 / -6.0 / +62.0 (Height: 7.2)	-56.0 / +8.0 / +40.0 (Height: 6.2)	-50.0 / +4.0 / +52.0 (Height: 5.1)	-58.0 / +12.0 / +32.0 (Height: 4.3)	-44.0 / -12.0 / +60.0 (Height: 3.6)	-52.0 / -8.0 / +54.0 (Height: 3.2)
+Area 44	0.0	8.3	0.0	34.6	0.0	0.0
+Area 1	0.0	0.0	0.0	0.0	0.0	9.4
+Area 4a	0.0	0.0	0.0	0.0	3.0	0.0
+Area 6d2	0.9	0.0	0.0	0.0	0.0	0.0
+Area 6d1	0.0	0.0	0.0	0.0	0.0	0.0
+
+
+Reference List
+
+Area 44
+K. Amunts, A. Schleicher, U. B¸rgel,H. Mohlberg, H.B.M. Uylings, K. Zilles. Broca's region revisited: Cytoarchitecture and intersubject variability. The Journal of Comparative Neurology 412: 319-341, 1999_x000D__x000D_K. Amunts, P.H. Weiss, H. Mohlberg, P. Pieperhoff, J. Gurd, J.N. Shah, C.J. Marshall, G.R. Fink, K. Zilles. Analysis of the neural mechanisms underlying verbal fluency in cytoarchitectonically defined stereotaxic space - The role of Brodmann's areas 44 and 45. NeuroImage 22 (1): 42-56, 2004
+
+Area 6d1
+https://doi.org/10.25493/4WSQ-8FM
+
+Area 6d2
+https://doi.org/10.25493/KXHS-N90
+
+Area 3b
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+Area 45
+K. Amunts, A. Schleicher, U. B¸rgel,H. Mohlberg, H.B.M. Uylings, K. Zilles. Broca's region revisited: Cytoarchitecture and intersubject variability. The Journal of Comparative Neurology 412: 319-341, 1999_x000D__x000D_K. Amunts, P.H. Weiss, H. Mohlberg, P. Pieperhoff, J. Gurd, J.N. Shah, C.J. Marshall, G.R. Fink, K. Zilles. Analysis of the neural mechanisms underlying verbal fluency in cytoarchitectonically defined stereotaxic space - The role of Brodmann's areas 44 and 45. NeuroImage 22 (1): 42-56, 2004
+
+Area 4a
+S. Geyer, A. Ledberg, A. Schleicher, S. Kinomura, T. Schormann, U.B¸rgel, T.Klingberg, J. Larsson, K.Zilles, P.E. Roland. Two different areas within the primary motor cortex of man, Nature 382: 805-807, 1996
+
+Area 1
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+
+
+
+Cluster 4 	166 vox	 +6	-40	-2
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Subiculum	16.6	3.1
+CA1 (Hippocampus)	1.9	0.3
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Subiculum	35.5	23.5	1.51	1.43	1.58
+CA1 (Hippocampus)	16.3	25.0	0.65	0.59	0.71
+DG (Hippocampus)	6.5	17.3	0.38	0.33	0.43
+Area FG3	0.6	23.5	0.03	0.01	0.04
+
+Top probabilites at peak voxels	Union across peaks
+CA1 (Hippocampus)	0.0
+Subiculum	0.0
+
+Probabilities at local maxima	+14.0 / -38.0 / -14.0 (Height: 4.7)	+16.0 / -30.0 / -2.0 (Height: 3.2)
+CA1 (Hippocampus)	0.0	0.7
+Subiculum	0.2	0.4
+
+
+Reference List
+
+CA1 (Hippocampus)
+K. Amunts, O. Kedo., M. Kindler., P. Pieperhoff., F. Schneider, H. Mohlberg, U. Habel, J.N. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005 
+
+Area FG3
+S. Lorenz, K.S. Weiner, J. Caspers, H. Mohlberg, A. Schleicher, S. Bludau, S.B. Eickhoff, K. Grill-Spector, K. Zilles, K. Amunts. Two new cytoarchitectonic areas on the human mid-fusiform gyrus. Cerebral Cortex 27 (1): 373-385, 2017.
+
+Subiculum
+K. Amunts, O. Kedo., M. Kindler., P. Pieperhoff., F. Schneider, H. Mohlberg, U. Habel, J.N. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005 
+
+DG (Hippocampus)
+K. Amunts, O. Kedo., M. Kindler., P. Pieperhoff., F. Schneider, H. Mohlberg, U. Habel, J.N. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005 
+
+
+
+
+Cluster 5 	109 vox	 -16	-50	-40
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Dorsal Dentate Nucleus	16.1	6.3
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Dorsal Dentate Nucleus	34.3	19.1	1.80	1.68	1.92
+Ventral Dentate Nucleus	10.1	15.7	0.64	0.56	0.71
+ Interposed Nucleus	0.0	16.1	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+Dorsal Dentate Nucleus	0.6
+Ventral Dentate Nucleus	0.1
+
+Probabilities at local maxima	-16.0 / -50.0 / -40.0 (Height: 5.8)	-10.0 / -56.0 / -42.0 (Height: 4)	+8.0 / -58.0 / -42.0 (Height: 3.1)
+Dorsal Dentate Nucleus	57.7	6.3	0.1
+Ventral Dentate Nucleus	9.7	0.0	0.0
+
+
+Reference List
+
+Dorsal Dentate Nucleus
+S. Tellmann, S. Bludau, S.B. Eickhoff, H. Mohlberg, M. Minnerop, K. Amunts. Cytoarchitectonic mapping of the human brain cerebellar nuclei in stereotaxic space and delineation of their co-activation patterns. Frontiers in Neuroanatomy 9: 54, 2015.
+
+Ventral Dentate Nucleus
+S. Tellmann, S. Bludau, S.B. Eickhoff, H. Mohlberg, M. Minnerop, K. Amunts. Cytoarchitectonic mapping of the human brain cerebellar nuclei in stereotaxic space and delineation of their co-activation patterns. Frontiers in Neuroanatomy 9: 54, 2015.
+
+ Interposed Nucleus
+S. Tellmann, S. Bludau, S.B. Eickhoff, H. Mohlberg, M. Minnerop, K. Amunts. Cytoarchitectonic mapping of the human brain cerebellar nuclei in stereotaxic space and delineation of their co-activation patterns. Frontiers in Neuroanatomy 9: 54, 2015.
+
+
+
+
+Cluster 6 	86 vox	 +22	-56	-44
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Dorsal Dentate Nucleus	4.6	19.1	0.24	0.17	0.31
+
+Top probabilites at peak voxels	Union across peaks
+Dorsal Dentate Nucleus	0.0
+
+Probabilities at local maxima	+22.0 / -56.0 / -44.0 (Height: 3.9)
+Dorsal Dentate Nucleus	0.0
+
+
+Reference List
+
+Dorsal Dentate Nucleus
+S. Tellmann, S. Bludau, S.B. Eickhoff, H. Mohlberg, M. Minnerop, K. Amunts. Cytoarchitectonic mapping of the human brain cerebellar nuclei in stereotaxic space and delineation of their co-activation patterns. Frontiers in Neuroanatomy 9: 54, 2015.
+
+
+
+
+Cluster 7 	84 vox	 -46	-70	-24
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area FG2	13.8	1.6
+Area hOc4v [V4(v)]	0.4	0.0
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area FG2	32.2	19.8	1.62	1.42	1.78
+Area hOc4v [V4(v)]	11.1	25.7	0.43	0.35	0.51
+Area FG1	4.5	19.4	0.23	0.19	0.28
+Area FG4	3.9	24.6	0.16	0.10	0.22
+Area hOc4la	0.8	27.4	0.03	0.01	0.05
+
+Top probabilites at peak voxels	Union across peaks
+Area FG2	0.0
+
+Probabilities at local maxima	-46.0 / -70.0 / -24.0 (Height: 5.6)
+Area FG2	0.7
+
+
+Reference List
+
+Area hOc4v [V4(v)]
+C. Rottschy, S.B. Eickhoff, A. Schleicher, H. Mohlberg, K. Zilles, K. Amunts. The ventral visual cortex in humans: Cytoarchitectonic mapping of two extrastriate areas. Human Brain Mapping 28 (1): 1-8, 2007
+
+Area FG1
+J. Caspers, K. Zilles, S.B. Eickhoff, A. Schleicher, H. Mohlberg, K. Amunts. Cytoarchitectonical analysis and probabilistic mapping of two extrastriate areas of the human posterior fusiform gyrus. Brain Structure and Function 218: 511-526, 2013.
+
+Area hOc4la
+A. Malikovic, K. Amunts, A. Schleicher, H. Mohlberg, M. Kujovic, S.E. Eickhoff, K. Zilles. Cytoarchitecture of the human lateral occipital cortex: Mapping of two extrastriate areas hOc4la and hOc4lp. Brain Structure and Function, 221(4):1877-97, 2016.
+
+Area FG2
+J. Caspers, K. Zilles, S.B. Eickhoff, A. Schleicher, H. Mohlberg, K. Amunts. Cytoarchitectonical analysis and probabilistic mapping of two extrastriate areas of the human posterior fusiform gyrus. Brain Structure and Function 218: 511-526, 2013.
+
+Area FG4
+S. Lorenz, K.S. Weiner, J. Caspers, H. Mohlberg, A. Schleicher, S. Bludau, S.B. Eickhoff, K. Grill-Spector, K. Zilles, K. Amunts. Two new cytoarchitectonic areas on the human mid-fusiform gyrus. Cerebral Cortex 27 (1): 373-385, 2017.
+
+
+
+
+Cluster 8 	69 vox	 -24	+4	-10
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Amygdala (CM)	7.2	3.9
+BF (Ch 4)	1.6	1.5
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+BF (Ch 4)	12.8	12.0	1.07	0.92	1.18
+Amygdala (CM)	15.7	13.6	1.15	0.98	1.35
+Amygdala (IF)	6.6	10.4	0.64	0.50	0.82
+Amygdala (LB)	5.2	22.6	0.23	0.16	0.30
+Amygdala (MF)	6.0	9.7	0.62	0.41	0.88
+Amygdala (VTM)	5.5	10.4	0.53	0.26	0.84
+Amygdala (SF)	0.2	18.8	0.01	0.01	0.01
+
+Top probabilites at peak voxels	Union across peaks
+BF (Ch 4)	0.5
+Amygdala (CM)	0.3
+Amygdala (IF)	0.0
+
+Probabilities at local maxima	-24.0 / +4.0 / -10.0 (Height: 3.7)	-26.0 / -6.0 / -10.0 (Height: 3.4)	-26.0 / -2.0 / -10.0 (Height: 3.2)
+BF (Ch 4)	0.0	30.2	22.6
+Amygdala (CM)	0.0	16.9	13.7
+Amygdala (IF)	0.0	0.7	0.0
+
+
+Reference List
+
+Amygdala (MF)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+BF (Ch 4)
+L. Zaborszky, L. Hoemke, H. Mohlberg, A. Schleicher, K. Amunts, and K. Zilles. Stereotaxic probabilistic maps of the magnocellular cell groups in human basal forebrain. Neuroimage 42 (3):1127-1141, 2008.
+
+Amygdala (CM)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Amygdala (SF)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Amygdala (VTM)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Amygdala (LB)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Amygdala (IF)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+
+
+
+Cluster 9 	63 vox	 +8	-44	-30
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+ Interposed Nucleus	5.0	16.1	0.31	0.22	0.38
+Ventral Dentate Nucleus	2.0	15.7	0.13	0.07	0.20
+Fastigial Nucleus	1.3	21.7	0.06	0.05	0.07
+Dorsal Dentate Nucleus	0.1	19.1	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+
+Probabilities at local maxima
+
+
+Reference List
+
+Dorsal Dentate Nucleus
+S. Tellmann, S. Bludau, S.B. Eickhoff, H. Mohlberg, M. Minnerop, K. Amunts. Cytoarchitectonic mapping of the human brain cerebellar nuclei in stereotaxic space and delineation of their co-activation patterns. Frontiers in Neuroanatomy 9: 54, 2015.
+
+Fastigial Nucleus
+S. Tellmann, S. Bludau, S.B. Eickhoff, H. Mohlberg, M. Minnerop, K. Amunts. Cytoarchitectonic mapping of the human brain cerebellar nuclei in stereotaxic space and delineation of their co-activation patterns. Frontiers in Neuroanatomy 9: 54, 2015.
+
+Ventral Dentate Nucleus
+S. Tellmann, S. Bludau, S.B. Eickhoff, H. Mohlberg, M. Minnerop, K. Amunts. Cytoarchitectonic mapping of the human brain cerebellar nuclei in stereotaxic space and delineation of their co-activation patterns. Frontiers in Neuroanatomy 9: 54, 2015.
+
+ Interposed Nucleus
+S. Tellmann, S. Bludau, S.B. Eickhoff, H. Mohlberg, M. Minnerop, K. Amunts. Cytoarchitectonic mapping of the human brain cerebellar nuclei in stereotaxic space and delineation of their co-activation patterns. Frontiers in Neuroanatomy 9: 54, 2015.
+
+
+
+
+Cluster 10 	54 vox	 +56	+6	+44
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area 44	5.3	18.7	0.29	0.25	0.33
+Area 3b	1.6	19.4	0.08	0.05	0.11
+Area 1	0.0	20.4	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+Area 44	0.1
+
+Probabilities at local maxima	+56.0 / +6.0 / +44.0 (Height: 4.5)
+Area 44	7.2
+
+
+Reference List
+
+Area 44
+K. Amunts, A. Schleicher, U. B¸rgel,H. Mohlberg, H.B.M. Uylings, K. Zilles. Broca's region revisited: Cytoarchitecture and intersubject variability. The Journal of Comparative Neurology 412: 319-341, 1999_x000D__x000D_K. Amunts, P.H. Weiss, H. Mohlberg, P. Pieperhoff, J. Gurd, J.N. Shah, C.J. Marshall, G.R. Fink, K. Zilles. Analysis of the neural mechanisms underlying verbal fluency in cytoarchitectonically defined stereotaxic space - The role of Brodmann's areas 44 and 45. NeuroImage 22 (1): 42-56, 2004
+
+Area 3b
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+Area 1
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+
+
+

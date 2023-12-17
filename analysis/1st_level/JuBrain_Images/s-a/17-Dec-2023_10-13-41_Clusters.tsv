@@ -1,0 +1,490 @@
+SPM: simulatenous [p<0.01 (unc.), k=50]
+
+Cluster 1 	180 vox	 -42	+59	-31
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+
+Top probabilites at peak voxels	Union across peaks
+
+Probabilities at local maxima
+
+
+Reference List
+
+
+
+
+Cluster 2 	178 vox	 +24	+62	-13
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area Fp1	34.5	9.7
+Area Fo4	7.1	9.6
+Area Fp2	1.5	1.1
+Area Fo5	0.6	1.0
+Area Fo3	0.1	0.0
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area Fp1	48.5	39.5	1.23	1.20	1.25
+Area Fo4	29.4	22.6	1.30	1.23	1.37
+Area Fo5	13.5	19.5	0.69	0.65	0.73
+Area Fp2	26.9	32.9	0.82	0.70	0.94
+Area Fo3	9.0	34.9	0.26	0.23	0.29
+Area p32	1.0	30.5	0.03	0.02	0.05
+Area Fo6	0.8	26.0	0.03	0.02	0.04
+Area Fo1	0.0	35.7	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+Area Fp1	1.0
+Area Fo4	0.1
+
+Probabilities at local maxima	+24.0 / +62.0 / -13.0 (Height: 11)	+24.0 / +68.0 / -1.0 (Height: 5.6)	+27.0 / +65.0 / +17.0 (Height: 5.2)	+15.0 / +68.0 / +17.0 (Height: 4.9)	+27.0 / +68.0 / +11.0 (Height: 4.7)
+Area Fp1	21.7	96.9	27.7	50.1	56.3
+Area Fo4	8.8	0.0	0.0	0.0	0.0
+
+
+Reference List
+
+Area Fo1
+A. Henssen, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, F. Gerboga, S.B. Eickhoff, S. Bludau, K. Amunts. Cytoarchitecture and probability maps of the human medial orbitofrontal cortex. Cortex, 75: 87-112, 2016.
+
+Area Fo3
+A. Henssen, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, F. Gerboga, S.B. Eickhoff, S. Bludau, K. Amunts. Cytoarchitecture and probability maps of the human medial orbitofrontal cortex. Cortex, 75: 87-112, 2016.
+
+Area Fo6
+https://doi.org/10.25493/34Q4-H62
+
+Area Fo4
+https://doi.org/10.25493/29G0-66F
+
+Area Fp1
+S. Bludau, S.B. Eickhoff, H. Mohlberg, S. Caspers, A.R. Laird, P.T. Fox, A. Schleicher, K. Zilles, K. Amunts. Cytoarchitecture, probability maps and functions of the human frontal pole. NeuroImage, 93: 260-275, 2014.
+
+Area p32
+Palomero-Gallagher N, Hoffstaedter F, Mohlberg H, Eickhoff SB, Amunts K, Zilles K. (2018) Human pregenual anterior cingulate cortex: structural, functional and connectional heterogeneity. Cerebral Cortex. doi: 10.1093/cercor/bhy124.
+
+Area Fo5
+https://doi.org/10.25493/HJMY-ZZP
+
+Area Fp2
+S. Bludau, S.B. Eickhoff, H. Mohlberg, S. Caspers, A.R. Laird, P.T. Fox, A. Schleicher, K. Zilles, K. Amunts. Cytoarchitecture, probability maps and functions of the human frontal pole. NeuroImage, 93: 260-275, 2014.
+
+
+
+
+Cluster 3 	121 vox	 +21	-79	+53
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area 7P (SPL)	27.0	17.7
+Area hIP8 (IPS)	26.4	16.6
+Area hPO1 (IPS)	23.5	13.3
+Area hIP5 (IPS)	5.8	3.3
+Area hIP7 (IPS)	5.1	4.1
+Area PGp (IPL)	0.6	0.1
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area hIP8 (IPS)	26.4	20.2	1.31	1.27	1.34
+Area hPO1 (IPS)	26.2	20.6	1.28	1.23	1.32
+Area 7P (SPL)	35.1	21.0	1.68	1.61	1.74
+Area hIP5 (IPS)	15.6	21.7	0.72	0.68	0.75
+Area hIP7 (IPS)	15.5	17.5	0.89	0.84	0.93
+Area PGp (IPL)	9.8	25.2	0.39	0.36	0.42
+Area 7A (SPL)	3.6	24.9	0.15	0.14	0.15
+Area hIP4 (IPS)	7.5	18.0	0.41	0.38	0.46
+Area hIP6 (IPS)	4.0	20.8	0.19	0.16	0.21
+Area hOc4d [V3A]	7.8	20.7	0.38	0.27	0.49
+Area hIP3 (IPS)	0.6	18.0	0.03	0.02	0.04
+
+Top probabilites at peak voxels	Union across peaks
+Area 7P (SPL)	0.5
+Area hIP8 (IPS)	0.4
+Area hIP7 (IPS)	0.3
+Area hPO1 (IPS)	0.3
+Area 7A (SPL)	0.0
+Area hIP5 (IPS)	0.0
+
+Probabilities at local maxima	+21.0 / -79.0 / +53.0 (Height: 6.5)	+24.0 / -76.0 / +38.0 (Height: 3.9)
+Area 7P (SPL)	46.2	0.0
+Area hIP8 (IPS)	11.5	30.0
+Area hIP7 (IPS)	0.0	29.2
+Area hPO1 (IPS)	0.0	28.3
+Area 7A (SPL)	2.1	0.0
+Area hIP5 (IPS)	0.0	1.3
+
+
+Reference List
+
+Area hOc4d [V3A]
+M. Kujovic, K. Zilles, A. Malikovic, A.  Schleicher, H. Mohlberg, C. Rottschy, S.B. Eickhoff, K. Amunts. Cytoarchitectonic mapping of the human dorsal extrastriate cortex. Brain Struct. Funct. 218 (1): 157-172, 2013.
+
+Area hIP5 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hIP3 (IPS)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area hPO1 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area PGp (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area hIP4 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area 7P (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area 7A (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area hIP8 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hIP7 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hIP6 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+
+
+
+Cluster 4 	106 vox	 +36	+59	-31
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+
+Top probabilites at peak voxels	Union across peaks
+
+Probabilities at local maxima
+
+
+Reference List
+
+
+
+
+Cluster 5 	82 vox	 -15	-88	+41
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area hOc4d [V3A]	20.2	6.3
+Area hPO1 (IPS)	20.1	7.7
+Area hOc3d [V3d]	13.9	2.8
+Area PGp (IPL)	9.2	1.5
+Area hOc4lp	7.6	1.6
+Area hOc4la	5.4	1.0
+Area hIP4 (IPS)	4.9	2.8
+Area hIP7 (IPS)	0.1	0.1
+Area hIP8 (IPS)	0.1	0.0
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area hPO1 (IPS)	30.6	20.6	1.49	1.44	1.55
+Area hOc4d [V3A]	27.0	20.7	1.31	1.27	1.34
+Area hOc3d [V3d]	21.5	23.0	0.93	0.89	0.98
+Area hOc4lp	19.5	25.3	0.77	0.72	0.82
+Area PGp (IPL)	18.6	25.2	0.74	0.68	0.78
+Area hOc4la	25.6	27.4	0.93	0.86	0.99
+Area hIP4 (IPS)	11.6	18.0	0.64	0.60	0.68
+Area hIP8 (IPS)	16.3	20.2	0.81	0.77	0.85
+Area hIP7 (IPS)	6.8	17.5	0.39	0.37	0.42
+Area 7P (SPL)	3.6	21.0	0.17	0.13	0.22
+Area hOc5 [V5/MT]	2.6	16.9	0.15	0.10	0.20
+Area hIP5 (IPS)	1.9	21.7	0.09	0.06	0.12
+Area hOc2 [V2]	1.4	23.0	0.06	0.04	0.08
+Area 7A (SPL)	0.1	24.9	0.01	0.00	0.01
+Area PGa (IPL)	0.3	19.1	0.02	0.00	0.04
+
+Top probabilites at peak voxels	Union across peaks
+Area hPO1 (IPS)	0.8
+Area hOc4d [V3A]	0.7
+Area hOc3d [V3d]	0.7
+Area hOc4lp	0.6
+Area PGp (IPL)	0.6
+Area hIP8 (IPS)	0.5
+Area hOc4la	0.3
+Area hIP4 (IPS)	0.2
+Area 7P (SPL)	0.1
+Area hIP7 (IPS)	0.0
+Area 7A (SPL)	0.0
+
+Probabilities at local maxima	-15.0 / -88.0 / +41.0 (Height: 5.5)	-24.0 / -91.0 / +29.0 (Height: 5)	-15.0 / -85.0 / +47.0 (Height: 4.9)	-18.0 / -91.0 / +35.0 (Height: 4.7)	-48.0 / -82.0 / +20.0 (Height: 3.8)	-54.0 / -73.0 / +14.0 (Height: 3.7)	-39.0 / -88.0 / +20.0 (Height: 3.7)
+Area hPO1 (IPS)	46.6	15.0	49.3	24.3	0.0	0.0	0.0
+Area hOc4d [V3A]	38.0	33.8	6.8	28.5	0.0	0.0	0.0
+Area hOc3d [V3d]	1.4	33.8	0.0	46.6	0.0	0.0	0.0
+Area hOc4lp	0.0	0.0	0.0	0.0	2.1	0.0	63.2
+Area PGp (IPL)	0.0	0.0	0.0	0.0	53.8	3.1	1.1
+Area hIP8 (IPS)	14.0	0.0	37.3	0.0	0.0	0.0	0.0
+Area hOc4la	0.0	0.0	0.0	0.0	12.8	18.7	0.0
+Area hIP4 (IPS)	0.0	15.8	0.0	0.0	0.0	0.0	2.2
+Area 7P (SPL)	0.0	0.0	5.7	0.0	0.0	0.0	0.0
+Area hIP7 (IPS)	0.0	0.2	0.0	0.6	0.0	0.0	0.0
+Area 7A (SPL)	0.0	0.0	0.1	0.0	0.0	0.0	0.0
+
+
+Reference List
+
+Area PGa (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area hOc5 [V5/MT]
+A. Malikovic, K. Amunts, A. Schleicher, H. Mohlberg, S.B. Eickhoff, M.Wilms, N. Palomero-Gallagher, E. Armstrong, K. Zilles. Cytoarchitectonic analysis of the human extrastriate cortex in the region of V5/MT+: A probabilistic, stereotaxic map of area hOc5, Cereb Cortex 17 (3): 562-574, 2007
+
+Area hOc4d [V3A]
+M. Kujovic, K. Zilles, A. Malikovic, A.  Schleicher, H. Mohlberg, C. Rottschy, S.B. Eickhoff, K. Amunts. Cytoarchitectonic mapping of the human dorsal extrastriate cortex. Brain Struct. Funct. 218 (1): 157-172, 2013.
+
+Area hIP5 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hPO1 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hOc3d [V3d]
+M. Kujovic, K. Zilles, A. Malikovic, A.  Schleicher, H. Mohlberg, C. Rottschy, S.B. Eickhoff, K. Amunts. Cytoarchitectonic mapping of the human dorsal extrastriate cortex. Brain Struct. Funct. 218 (1): 157-172, 2013.
+
+Area PGp (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area hIP4 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hOc4la
+A. Malikovic, K. Amunts, A. Schleicher, H. Mohlberg, M. Kujovic, S.E. Eickhoff, K. Zilles. Cytoarchitecture of the human lateral occipital cortex: Mapping of two extrastriate areas hOc4la and hOc4lp. Brain Structure and Function, 221(4):1877-97, 2016.
+
+Area 7P (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area 7A (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area hOc4lp
+A. Malikovic, K. Amunts, A. Schleicher, H. Mohlberg, M. Kujovic, S.E. Eickhoff, K. Zilles. Cytoarchitecture of the human lateral occipital cortex: Mapping of two extrastriate areas hOc4la and hOc4lp. Brain Structure and Function, 221(4):1877-97, 2016.
+
+Area hIP8 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hIP7 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hOc2 [V2]
+K. Amunts, A. Malikovic, H.Mohlberg, T.Schormann, K. Zilles. Brodmann's areas 17 and 18 brought into stereotaxic space - where and how variable? NeuroImage 11: 66-84, 2000
+
+
+
+
+Cluster 6 	82 vox	 -24	-67	+68
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area 7A (SPL)	28.9	4.6
+Area PFm (IPL)	19.5	3.6
+Area hIP6 (IPS)	18.2	6.5
+Area PGa (IPL)	15.6	3.4
+Area hIP8 (IPS)	2.2	0.9
+Area hIP1 (IPS)	0.4	0.1
+Area hIP5 (IPS)	0.4	0.1
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area 7A (SPL)	41.8	24.9	1.68	1.61	1.75
+Area PFm (IPL)	34.1	24.0	1.42	1.34	1.49
+Area PGa (IPL)	30.7	19.1	1.61	1.56	1.66
+Area hIP6 (IPS)	25.9	20.8	1.24	1.18	1.30
+Area PGp (IPL)	8.0	25.2	0.32	0.30	0.34
+Area hIP5 (IPS)	10.6	21.7	0.49	0.45	0.53
+Area hIP8 (IPS)	14.9	20.2	0.74	0.64	0.84
+Area hIP1 (IPS)	5.7	19.1	0.30	0.25	0.34
+Area 7P (SPL)	2.5	21.0	0.12	0.10	0.14
+Area PF (IPL)	3.1	21.7	0.14	0.11	0.18
+Area hIP3 (IPS)	1.8	18.0	0.10	0.09	0.12
+Area hPO1 (IPS)	1.1	20.6	0.05	0.03	0.07
+Area 7PC (SPL)	0.1	18.1	0.01	0.00	0.01
+Area 5L (SPL)	0.0	20.8	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+Area PFm (IPL)	0.9
+Area 7A (SPL)	0.8
+Area PGa (IPL)	0.7
+Area hIP6 (IPS)	0.4
+Area hIP5 (IPS)	0.1
+Area PGp (IPL)	0.1
+Area hIP8 (IPS)	0.1
+Area 7P (SPL)	0.0
+
+Probabilities at local maxima	-24.0 / -67.0 / +68.0 (Height: 6.5)	-27.0 / -73.0 / +56.0 (Height: 5.4)	-45.0 / -64.0 / +53.0 (Height: 4.7)	-54.0 / -61.0 / +47.0 (Height: 4)	-57.0 / -58.0 / +44.0 (Height: 3.5)
+Area PFm (IPL)	0.0	0.0	47.5	62.9	68.8
+Area 7A (SPL)	73.4	17.3	0.0	0.0	0.0
+Area PGa (IPL)	0.0	0.0	41.5	37.1	31.2
+Area hIP6 (IPS)	0.0	44.4	0.0	0.0	0.0
+Area hIP5 (IPS)	0.0	12.6	0.0	0.0	0.0
+Area PGp (IPL)	0.0	0.0	11.1	0.0	0.0
+Area hIP8 (IPS)	0.0	10.3	0.0	0.0	0.0
+Area 7P (SPL)	0.0	0.0	0.0	0.0	0.0
+
+
+Reference List
+
+Area PGa (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area 7PC (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area hIP1 (IPS)
+H.-J. Choi, K. Zilles, H. Mohlberg, A. Schleicher, G. R. Fink, E. Armstrong, and K. Amunts. Cytoarchitectonic identification and probabilistic mapping of two distinct areas within the anterior ventral bank of the human intraparietal sulcus. J.Comp.Neurol. 495 (1):53-69, 2006.
+
+Area hIP5 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area PFm (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area hIP3 (IPS)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area hPO1 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area PGp (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area 5L (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area 7P (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area PF (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area 7A (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area hIP8 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+Area hIP6 (IPS)
+M. Richter, K. Amunts, H. Mohlberg, S. Bludau, S.B. Eickhoff, K. Zilles, S. Caspers. Cytoarchitectonic segregation of human posterior intraparietal and adjacent parieto-occipital sulcus and ist relation to visuomotor and cognitive functions. Cereb Cortex, in press, 2018
+
+
+
+
+Cluster 7 	80 vox	 -45	-37	+68
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area 1	35.4	9.1
+Area 7PC (SPL)	5.0	1.9
+Area 2	1.1	0.3
+Area 7A (SPL)	0.2	0.0
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area 1	56.0	20.4	2.75	2.67	2.83
+Area 2	11.1	17.7	0.63	0.59	0.67
+Area 7PC (SPL)	31.9	18.1	1.77	1.57	1.93
+Area 7A (SPL)	19.9	24.9	0.80	0.71	0.89
+Area 3b	5.1	19.4	0.26	0.23	0.30
+Area PFt (IPL)	6.9	24.9	0.28	0.20	0.34
+Area hIP3 (IPS)	7.8	18.0	0.44	0.33	0.54
+Area 4a	3.5	18.6	0.19	0.10	0.25
+Area 5L (SPL)	2.7	20.8	0.13	0.07	0.20
+Area PFm (IPL)	0.0	24.0	0.00	0.00	0.00
+Area hIP2 (IPS)	0.1	15.9	0.00	0.00	0.00
+Area 6d1	0.0	22.9	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+Area 1	0.8
+Area 2	0.1
+
+Probabilities at local maxima	-51.0 / -28.0 / +62.0 (Height: 5.4)
+Area 1	80.1
+Area 2	8.7
+
+
+Reference List
+
+Area 2
+C. Grefkes, S. Geyer, T. Schormann, P. Roland, K. Zilles. Human somatosensory area 2: observer-independent cytoarchitectonic mapping, interindividual variability, and population map. NeuroImage 14: 617-31, 2001.
+
+Area 7PC (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area PFm (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area hIP2 (IPS)
+H.-J. Choi, K. Zilles, H. Mohlberg, A. Schleicher, G. R. Fink, E. Armstrong, and K. Amunts. Cytoarchitectonic identification and probabilistic mapping of two distinct areas within the anterior ventral bank of the human intraparietal sulcus. J.Comp.Neurol. 495 (1):53-69, 2006.
+
+Area 6d1
+https://doi.org/10.25493/4WSQ-8FM
+
+Area PFt (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area hIP3 (IPS)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area 3b
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+Area 4a
+S. Geyer, A. Ledberg, A. Schleicher, S. Kinomura, T. Schormann, U.B¸rgel, T.Klingberg, J. Larsson, K.Zilles, P.E. Roland. Two different areas within the primary motor cortex of man, Nature 382: 805-807, 1996
+
+Area 1
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+Area 5L (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area 7A (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+
+
+
+Cluster 8 	57 vox	 +24	-49	+77
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area 5L (SPL)	12.7	2.5
+Area 7PC (SPL)	11.4	3.1
+Area 7A (SPL)	2.5	0.3
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area 5L (SPL)	36.0	20.8	1.73	1.63	1.82
+Area 7PC (SPL)	33.5	18.1	1.85	1.70	2.00
+Area 7A (SPL)	16.4	24.9	0.66	0.59	0.71
+Area 5M (SPL)	9.4	21.2	0.44	0.37	0.52
+Area 2	4.8	17.7	0.27	0.21	0.34
+Area 1	1.5	20.4	0.07	0.05	0.09
+Area 3b	0.4	19.4	0.02	0.01	0.04
+
+Top probabilites at peak voxels	Union across peaks
+
+Probabilities at local maxima
+
+
+Reference List
+
+Area 2
+C. Grefkes, S. Geyer, T. Schormann, P. Roland, K. Zilles. Human somatosensory area 2: observer-independent cytoarchitectonic mapping, interindividual variability, and population map. NeuroImage 14: 617-31, 2001.
+
+Area 7PC (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area 3b
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+Area 5M (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area 1
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+Area 5L (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+Area 7A (SPL)
+F. Scheperjans, K. Hermann, S. B. Eickhoff, K. Amunts, A. Schleicher, K. Zilles. Observer-independent cytoarchitectonic mapping of the human superior parietal cortex. Cereb.Cortex 18 (4): 846-867, 2008. _x000D__x000D_F. Scheperjans, S. B. Eickhoff, L. Hˆmke, H. Mohlberg, K. Hermann, K. Amunts, K. Zilles. Probabilistic maps, morphometry, and variability of cytoarchitectonic areas in the human superior parietal cortex. Cereb.Cortex 18 (9): 2141-2157, 2008.
+
+
+
+

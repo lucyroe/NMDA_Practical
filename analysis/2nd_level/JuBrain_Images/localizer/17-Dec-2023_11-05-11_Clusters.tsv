@@ -1,0 +1,262 @@
+SPM: left [p<0.01 (unc.), k=50]
+
+Cluster 1 	283 vox	 +30	+2	+12
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area Id6	4.9	2.0
+Area Ig1 	3.7	7.1
+Area Id4	2.8	4.0
+Area Id5	2.2	2.7
+Amygdala (CM)	1.7	3.7
+Area Ig2 	1.5	2.2
+BF (Ch 4)	1.0	3.9
+Area Id2 	0.5	1.0
+Area OP2 [PIVC]	0.4	0.7
+Area Id3 	0.2	0.2
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area Id6	25.5	24.9	1.02	0.95	1.10
+Area Ig1 	24.5	16.3	1.50	1.31	1.70
+Area Ig2 	16.6	17.3	0.96	0.85	1.07
+Area Id4	17.4	15.6	1.12	0.98	1.24
+Area Id5	17.2	20.2	0.85	0.75	0.97
+Amygdala (CM)	22.7	13.6	1.67	1.46	1.87
+BF (Ch 4)	15.8	12.0	1.31	1.14	1.49
+Area Id2 	10.9	14.7	0.74	0.63	0.84
+Area OP2 [PIVC]	13.9	15.8	0.88	0.73	1.03
+Area OP3 [VS]	4.3	12.9	0.34	0.28	0.39
+Area Id3 	5.3	20.9	0.25	0.19	0.32
+Amygdala (IF)	6.1	10.4	0.59	0.47	0.72
+Area TE 1.1	5.6	19.3	0.29	0.22	0.38
+Amygdala (MF)	3.3	9.7	0.34	0.22	0.46
+Amygdala (LB)	3.4	22.6	0.15	0.10	0.20
+Area OP4 [PV]	3.8	15.3	0.25	0.17	0.34
+Area Ig3	0.9	14.4	0.06	0.03	0.11
+Amygdala (SF)	0.8	18.8	0.04	0.02	0.06
+Amygdala (VTM)	0.3	10.4	0.02	0.02	0.03
+Area OP8	0.0	12.7	0.00	0.00	0.00
+Area Id1 	0.0	16.4	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+Area Ig1 	0.6
+BF (Ch 4)	0.4
+Amygdala (CM)	0.3
+Area Ig2 	0.2
+Area Id5	0.1
+Area OP2 [PIVC]	0.1
+Area TE 1.1	0.1
+Area Id6	0.0
+Area Id2 	0.0
+Amygdala (MF)	0.0
+Amygdala (IF)	0.0
+
+Probabilities at local maxima	+30.0 / +2.0 / +12.0 (Height: 7.6)	+34.0 / -10.0 / +4.0 (Height: 5.6)	+22.0 / -2.0 / -10.0 (Height: 5)	+34.0 / -22.0 / +12.0 (Height: 4.7)	+32.0 / -8.0 / +2.0 (Height: 4.5)
+Area Ig1 	0.0	0.0	0.0	59.1	0.0
+BF (Ch 4)	0.0	0.0	42.4	0.0	0.0
+Amygdala (CM)	0.0	0.0	28.6	0.0	0.0
+Area Ig2 	0.0	1.9	0.0	19.9	0.0
+Area Id5	0.0	12.3	0.0	0.0	0.3
+Area OP2 [PIVC]	0.0	0.0	0.0	11.8	0.0
+Area TE 1.1	0.0	0.0	0.0	8.0	0.0
+Area Id6	4.7	0.0	0.0	0.0	0.0
+Area Id2 	0.0	1.6	0.0	0.0	0.0
+Amygdala (MF)	0.0	0.0	1.1	0.0	0.0
+Amygdala (IF)	0.0	0.0	0.3	0.0	0.0
+
+
+Reference List
+
+Amygdala (MF)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Area Id6
+https://doi.org/10.25493/54HZ-KFQ
+
+BF (Ch 4)
+L. Zaborszky, L. Hoemke, H. Mohlberg, A. Schleicher, K. Amunts, and K. Zilles. Stereotaxic probabilistic maps of the magnocellular cell groups in human basal forebrain. Neuroimage 42 (3):1127-1141, 2008.
+
+Area Id2 
+
+
+Area Ig3
+
+
+Area OP2 [PIVC]
+S. Eickhoff, A. Schleicher, K. Zilles, K. Amunts. The human parietal operculum. I. Cytoarchitectonic mapping of subdivisions. Cereb. Cortex 16 (2): 254-267, 2006., _x000D__x000D_S. Eickhoff, K. Amunts, H. Mohlberg, K. Zilles. The human parietal operculum. II. Stereotaxic maps and correlation with functional imaging results. Cereb. Cortex 16 (2): 268-279, 2006.
+
+Area TE 1.1
+P. Morosan, J. Rademacher, A. Schleicher, K. Amunts, T. Schormann, K. Zilles. Human primary auditory cortex: Cytoarchitectonic subdivisions and mapping into a spatial reference system. NeuroImage 13: 684-701, 2001._x000D__x000D_J. Rademacher, P. Morosan, T. Schormann, A. Schleicher, C. Werner, H.J. Freund, K. Zilles. Probabilistic mapping and volume measurement of human primary auditory cortex. NeuroImage 13: 669-683, 2001.
+
+Area Id3 
+
+
+Area Ig2 
+F. Kurth, S. B. Eickhoff, A. Schleicher, L. Hoemke, K. Zilles, and K. Amunts. Cytoarchitecture and probabilistic maps of the human posterior insular cortex. Cereb.Cortex 20 (6):1448-1461, 2009.
+
+Amygdala (CM)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Amygdala (SF)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Area Id4
+https://doi.org/10.25493/K63G-89H
+
+Amygdala (VTM)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Area Ig1 
+F. Kurth, S. B. Eickhoff, A. Schleicher, L. Hoemke, K. Zilles, and K. Amunts. Cytoarchitecture and probabilistic maps of the human posterior insular cortex. Cereb.Cortex 20 (6):1448-1461, 2009.
+
+Area Id1 
+F. Kurth, S. B. Eickhoff, A. Schleicher, L. Hoemke, K. Zilles, and K. Amunts. Cytoarchitecture and probabilistic maps of the human posterior insular cortex. Cereb.Cortex 20 (6):1448-1461, 2009.
+
+Area OP8
+https://doi.org/10.25493/NGF8-TA4
+
+Amygdala (LB)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Area OP3 [VS]
+S. Eickhoff, A. Schleicher, K. Zilles, K. Amunts. The human parietal operculum. I. Cytoarchitectonic mapping of subdivisions. Cereb. Cortex 16 (2): 254-267, 2006., _x000D__x000D_S. Eickhoff, K. Amunts, H. Mohlberg, K. Zilles. The human parietal operculum. II. Stereotaxic maps and correlation with functional imaging results. Cereb. Cortex 16 (2): 268-279, 2006.
+
+Amygdala (IF)
+K. Amunts, O. Kedo, M. Kindler, P. Pieperhoff, F. Schneider, H. Mohlberg, U. Habel, N.J. Shah, K. Zilles. Cytoarchitectonic mapping of the human amygdala, hippocampal region and entorhinal cortex. Anatomy and Embryology 210 (5-6): 343-352, 2005. _x000D__x000D_O. Kedo, K. Zilles, N. Palomero-Gallagher, A. Schleicher, H. Mohlberg, S. Bludau, K. Amunts. Receptor-driven, multimodal mapping of the human amygdala. Brain Structure and Function 223 (4): 1637-1666, 2018.
+
+Area Id5
+https://doi.org/10.25493/5CK1-B1G
+
+Area OP4 [PV]
+S. Eickhoff, A. Schleicher, K. Zilles, K. Amunts. The human parietal operculum. I. Cytoarchitectonic mapping of subdivisions. Cereb. Cortex 16 (2): 254-267, 2006., _x000D__x000D_S. Eickhoff, K. Amunts, H. Mohlberg, K. Zilles. The human parietal operculum. II. Stereotaxic maps and correlation with functional imaging results. Cereb. Cortex 16 (2): 268-279, 2006.
+
+
+
+
+Cluster 2 	244 vox	 +54	-36	+18
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area PF (IPL)	22.5	4.9
+Area PFm (IPL)	11.6	1.9
+Area OP1 [SII]	6.9	2.3
+Area PFop (IPL)	1.9	1.0
+Area PFcm (IPL)	0.9	0.4
+Area OP4 [PV]	0.3	0.1
+Area PFt (IPL)	0.1	0.0
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area PF (IPL)	24.9	21.7	1.15	1.09	1.20
+Area PFm (IPL)	20.9	24.0	0.87	0.82	0.92
+Area OP1 [SII]	20.1	18.9	1.07	0.98	1.16
+Area PFcm (IPL)	5.8	18.9	0.30	0.27	0.33
+Area PGa (IPL)	5.9	19.1	0.31	0.29	0.32
+Area PFop (IPL)	13.6	16.1	0.84	0.76	0.93
+Area PFt (IPL)	8.7	24.9	0.35	0.33	0.37
+Area TE 3	6.2	24.2	0.26	0.23	0.29
+Area OP4 [PV]	14.0	15.3	0.92	0.80	1.03
+Area OP3 [VS]	2.3	12.9	0.18	0.12	0.24
+Area hIP1 (IPS)	0.1	19.1	0.01	0.00	0.01
+Area 1	0.1	20.4	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+Area PFm (IPL)	0.7
+Area OP1 [SII]	0.7
+Area PF (IPL)	0.6
+Area OP4 [PV]	0.5
+Area PFop (IPL)	0.2
+Area PGa (IPL)	0.2
+Area PFt (IPL)	0.2
+Area TE 3	0.0
+Area PFcm (IPL)	0.0
+Area hIP1 (IPS)	0.0
+
+Probabilities at local maxima	+54.0 / -36.0 / +18.0 (Height: 5.1)	+62.0 / -38.0 / +26.0 (Height: 4.7)	+44.0 / -42.0 / +20.0 (Height: 4.3)	+68.0 / -24.0 / +22.0 (Height: 3.7)	+56.0 / -40.0 / +28.0 (Height: 3.4)	+64.0 / -18.0 / +20.0 (Height: 3.2)	+62.0 / -16.0 / +18.0 (Height: 3.2)
+Area PFm (IPL)	7.4	55.9	0.4	0.0	34.6	0.0	0.0
+Area OP1 [SII]	0.0	0.0	0.0	0.0	0.0	43.6	47.6
+Area PF (IPL)	0.0	29.8	0.0	32.6	0.0	5.2	0.0
+Area OP4 [PV]	0.0	0.0	0.0	0.0	0.0	18.8	35.3
+Area PFop (IPL)	0.0	0.0	0.0	0.3	0.0	21.7	1.6
+Area PGa (IPL)	0.0	4.3	0.0	0.0	15.7	0.0	0.0
+Area PFt (IPL)	0.0	0.0	0.0	11.7	0.0	5.2	0.0
+Area TE 3	0.0	0.0	0.0	0.0	0.0	2.3	0.0
+Area PFcm (IPL)	0.0	0.7	0.0	0.0	0.0	0.0	0.0
+Area hIP1 (IPS)	0.0	0.0	0.0	0.0	0.1	0.0	0.0
+
+
+Reference List
+
+Area TE 3
+P. Morosan, J. Rademacher, N. Palomero-Gallagher, and K. Zilles. Anatomical organization of the human auditory cortex: Cytoarchitecture and transmitter receptors. In: The auditory cortex: Towards a synthesis of human and animal research, edited by R. Kˆnig, P. Heil, E. Budinger, and H. Scheich, Mahwah, New Jersey:Lawrence Erlbaum, 2005, p. 27-50.
+
+Area PGa (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area hIP1 (IPS)
+H.-J. Choi, K. Zilles, H. Mohlberg, A. Schleicher, G. R. Fink, E. Armstrong, and K. Amunts. Cytoarchitectonic identification and probabilistic mapping of two distinct areas within the anterior ventral bank of the human intraparietal sulcus. J.Comp.Neurol. 495 (1):53-69, 2006.
+
+Area PFm (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area PFt (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area PFcm (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area 1
+S. Geyer, A. Schleicher, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex: I. Microstructural organisation and interindividual variability. NeuroImage 10: 63-83, 1999. _x000D__x000D_S. Geyer, T. Schormann, H. Mohlberg, K. Zilles. Areas 3a, 3b, and 1 of human primary somatosensory cortex:  II. Spatial normalization to standard anatomical space. NeuroImage 11 (6): 684-696, 2000.
+
+Area OP1 [SII]
+S. Eickhoff, A. Schleicher, K. Zilles, K. Amunts. The human parietal operculum. I. Cytoarchitectonic mapping of subdivisions. Cereb. Cortex 16 (2): 254-267, 2006., _x000D__x000D_S. Eickhoff, K. Amunts, H. Mohlberg, K. Zilles. The human parietal operculum. II. Stereotaxic maps and correlation with functional imaging results. Cereb. Cortex 16 (2): 268-279, 2006.
+
+Area PF (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+Area OP3 [VS]
+S. Eickhoff, A. Schleicher, K. Zilles, K. Amunts. The human parietal operculum. I. Cytoarchitectonic mapping of subdivisions. Cereb. Cortex 16 (2): 254-267, 2006., _x000D__x000D_S. Eickhoff, K. Amunts, H. Mohlberg, K. Zilles. The human parietal operculum. II. Stereotaxic maps and correlation with functional imaging results. Cereb. Cortex 16 (2): 268-279, 2006.
+
+Area OP4 [PV]
+S. Eickhoff, A. Schleicher, K. Zilles, K. Amunts. The human parietal operculum. I. Cytoarchitectonic mapping of subdivisions. Cereb. Cortex 16 (2): 254-267, 2006., _x000D__x000D_S. Eickhoff, K. Amunts, H. Mohlberg, K. Zilles. The human parietal operculum. II. Stereotaxic maps and correlation with functional imaging results. Cereb. Cortex 16 (2): 268-279, 2006.
+
+Area PFop (IPL)
+S. Caspers, S. Geyer, A. Schleicher, H. Mohlberg, K. Amunts, K. Zilles. The human inferior parietal cortex: Cytoarchitectonic parcellation and interindividual variability. Neuroimage 33 (2): 430-448, 2006. _x000D__x000D_S. Caspers, S. B. Eickhoff, S. Geyer, F. Scheperjans, H. Mohlberg, K. Zilles, K. Amunts. The human inferior parietal lobule in stereotaxic space. Brain Structure and Function 212 (6): 481-495, 2008.
+
+
+
+
+Cluster 3 	109 vox	 +56	+38	+6
+
+Assignment based on Maximum Probability Map	Percent of Cluster volume in Area	Percent of Area activated by Cluster
+Area 45	66.7	7.7
+
+Probability exceedance by Area	Mean probability at Cluster location (%)	Mean probability across PMap (%)	Ratio	95% CI	95% CI
+Area 45	51.3	21.7	2.36	2.32	2.40
+Area OP9	2.0	18.5	0.11	0.09	0.14
+Area OP8	1.4	12.7	0.11	0.07	0.14
+Area 44	0.0	18.7	0.00	0.00	0.00
+
+Top probabilites at peak voxels	Union across peaks
+Area 45	1.0
+Area OP9	0.0
+
+Probabilities at local maxima	+56.0 / +38.0 / +6.0 (Height: 3.5)	+50.0 / +32.0 / +12.0 (Height: 3.5)	+58.0 / +32.0 / +8.0 (Height: 3)	+56.0 / +30.0 / +12.0 (Height: 3)
+Area 45	40.7	61.7	64.5	75.0
+Area OP9	0.0	0.0	0.0	0.0
+
+
+Reference List
+
+Area 44
+K. Amunts, A. Schleicher, U. B¸rgel,H. Mohlberg, H.B.M. Uylings, K. Zilles. Broca's region revisited: Cytoarchitecture and intersubject variability. The Journal of Comparative Neurology 412: 319-341, 1999_x000D__x000D_K. Amunts, P.H. Weiss, H. Mohlberg, P. Pieperhoff, J. Gurd, J.N. Shah, C.J. Marshall, G.R. Fink, K. Zilles. Analysis of the neural mechanisms underlying verbal fluency in cytoarchitectonically defined stereotaxic space - The role of Brodmann's areas 44 and 45. NeuroImage 22 (1): 42-56, 2004
+
+Area OP9
+https://doi.org/10.25493/3A30-5E4
+
+Area 45
+K. Amunts, A. Schleicher, U. B¸rgel,H. Mohlberg, H.B.M. Uylings, K. Zilles. Broca's region revisited: Cytoarchitecture and intersubject variability. The Journal of Comparative Neurology 412: 319-341, 1999_x000D__x000D_K. Amunts, P.H. Weiss, H. Mohlberg, P. Pieperhoff, J. Gurd, J.N. Shah, C.J. Marshall, G.R. Fink, K. Zilles. Analysis of the neural mechanisms underlying verbal fluency in cytoarchitectonically defined stereotaxic space - The role of Brodmann's areas 44 and 45. NeuroImage 22 (1): 42-56, 2004
+
+Area OP8
+https://doi.org/10.25493/NGF8-TA4
+
+
+
+
