@@ -1,9 +1,9 @@
 # NMDA Practical: Bistable Tactile Perception
 
-`[Last update: December 16, 2023]`
+`[Last update: December 22, 2023]`
 
     Period:     2023-10 - 2023-12
-    Status:     work in progress
+    Status:     finished
 
     Author(s):  Ana Boeke, Cheyenne Cavender, Denise Kittelmann, Lucy Roellecke
     Contact:    lucy.roellecke@fu-berlin.de
@@ -17,15 +17,16 @@ This repository contains all code and ressources concerning the Neurocognitive M
 
      📂 analysis
      ├── 📂 1st_level
-     │   ├── 📁 1stLevel_Localizer
-     │   ├── 📁 1stLevel_Model
-     │   └── 📁 log_files
+     │   ├── 📁 localizer
+     │   ├── 📁 model
+     │   └── 📁 JuBrain_Images
      ├── 📂 2nd_level
      │   ├── 📁 a-s
      │   ├── 📁 left
      │   ├── 📁 right
      │   ├── 📁 s-a 
-     │   └──  📁 switch   
+     │   ├── 📁 switch   
+     │   └── 📁 JuBrain_Images
      └── 📁 behavioral
      📂 code
      ├── 📂 1st_level
@@ -34,16 +35,15 @@ This repository contains all code and ressources concerning the Neurocognitive M
      └── 📁 preprocessing
      📂 figures
      ├── 📂 1st_level
+     │   ├── 📁 localizer   
+     │   └── 📁 model
      ├── 📂 2nd_level
+     │   ├── 📁 localizer   
+     │   └── 📁 model
      ├── 📁 behavioral
      └── 📁 report
      📂 resources
      
-## To Dos
-
-- [ ] write a more meaningful project structure paragraph
-- [ ] clean up folder structure + add to project structure paragraph
-
 ## Contributors/Collaborators
 
 Ana Boeke     

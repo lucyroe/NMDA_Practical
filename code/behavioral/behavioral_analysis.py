@@ -2,7 +2,7 @@
 Behavioral Analysis for NMDA Practical Bistable Tactile Perception
 
 Author: Lucy Roellecke
-Last Update: December 16, 2023
+Last Update: December 22, 2023
 """
 
 # %% Import
@@ -82,13 +82,13 @@ def check_assumptions(
     return sphericity_results, normality_results
 
 
-def plot_results(
+def plot_boxplot(
     data: pd.DataFrame,  # data for plotting
     x: str,  # x-axis variable
     y: str,  # y-axis variable
     hue: str,  # hue variable
 ) -> plt.figure:
-    """Plot results."""
+    """Plot results of ANOVA in boxplot."""
     # plot data
     color_palette_boxes = ["#E69F00", "#56B4E9"]
     color_palette_points = ["#D55E00", "#0072B2"]
@@ -105,6 +105,113 @@ def plot_results(
     # show plot
     # plt.show()
     return figure
+
+
+def plot_barplot(
+    data: pd.DataFrame,  # data for plotting
+    x: str,  # x-axis variable
+    y: str,  # y-axis variable
+    hue: str,  # hue variable
+) -> plt.figure:
+    """Plot results of ANOVA (post-hoc tests) in barplot."""
+    # plot data
+    color_palette_bars = {
+        "1": "#009e73",
+        "2": "#008e7d",
+        "3": "#007c7f",
+        "4": "#006b79",
+        "5": "#1f596b",
+        "6": "#2f4858",
+    }
+    figure, axes = plt.subplots(figsize=(12, 6))
+    sns.barplot(
+        data=data,
+        x=x,
+        y=y,
+        hue=hue,
+        palette=color_palette_bars,
+        linewidth=1.5,
+        edgecolor="0.1",
+        ax=axes,
+        legend=False,
+    )
+    # set xtick labels
+    axes.set_xticklabels(["1", "2", "3", "4", "5", "6"])
+
+    # set y-axis limits
+    axes.set_ylim([0, 5.5])
+    # show plot
+    # plt.show()
+    return figure
+
+
+def barplot_annotate_brackets(
+    num1,
+    num2,
+    data,
+    center,
+    height,
+    yerr=None,
+    dh=0.05,
+    barh=0.05,
+    fs=None,
+    maxasterix=None,
+):
+    """
+    Annotate barplot with p-values.
+
+    :param num1: number of left bar to put bracket over
+    :param num2: number of right bar to put bracket over
+    :param data: string to write or number for generating asterixes
+    :param center: centers of all bars (like plt.bar() input)
+    :param height: heights of all bars (like plt.bar() input)
+    :param yerr: yerrs of all bars (like plt.bar() input)
+    :param dh: height offset over bar / bar + yerr in axes coordinates (0 to 1)
+    :param barh: bar height in axes coordinates (0 to 1)
+    :param fs: font size
+    """
+
+    if data.isinstance(str):
+        text = data
+    else:
+        # * is p < 0.05
+        # ** is p < 0.005
+        # *** is p < 0.0005
+        # etc.
+        text = ""
+        p = 0.05
+
+        while data < p:
+            text += "*"
+            p /= 10.0
+
+        if len(text) == 0:
+            text = "n. s."
+
+    lx, ly = center[num1 - 1], height[num1 - 1]
+    rx, ry = center[num2 - 1], height[num2 - 1]
+
+    if yerr:
+        ly += yerr[num1]
+        ry += yerr[num2]
+
+    ax_y0, ax_y1 = plt.gca().get_ylim()
+    dh *= ax_y1 - ax_y0
+    barh *= ax_y1 - ax_y0
+
+    y = max(ly, ry) + dh
+
+    barx = [lx, lx, rx, rx]
+    bary = [y, y + barh, y + barh, y]
+    mid = ((lx + rx) / 2, y + barh)
+
+    plt.plot(barx, bary, c="black")
+
+    kwargs = dict(ha="center", va="bottom")
+    if fs is not None:
+        kwargs["fontsize"] = fs
+
+    plt.text(*mid, text, **kwargs)
 
 
 # %% __main__  >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o >><< o
@@ -230,16 +337,69 @@ if __name__ == "__main__":
         anova_data["Number of Blinks"][anova_data["Switch To"] == 2]
     )
 
+    # calculate mean of number of blinks for each run
+    for index_run, run in enumerate(runs):
+        # get run data
+        run_data = anova_data[anova_data["Run"] == run]
+        # calculate mean
+        run_mean = np.mean(run_data["Number of Blinks"])
+        # calculate std
+        run_std = np.std(run_data["Number of Blinks"])
+
+        # add mean to dataframe
+        anova_data.loc[row_index + 6 + index_run, "Subject"] = "Mean"
+        anova_data.loc[row_index + 6 + index_run, "Run"] = run
+        anova_data.loc[row_index + 6 + index_run, "Number of Blinks"] = run_mean
+        anova_data.loc[row_index + 6 + index_run + 6, "Subject"] = "Std"
+        anova_data.loc[row_index + 6 + index_run + 6, "Run"] = run
+        anova_data.loc[row_index + 6 + index_run + 6, "Number of Blinks"] = run_std
+
     # export descriptive statistics to csv
     anova_data.to_csv(os.path.join(resultpath, "descriptives_data.csv"))
 
     # plot anova results
-    anova_figure = plot_results(
+    anova_figure = plot_boxplot(
         anova_data, "Switch To", "Number of Blinks", "Switch To"
     )
 
     # save plot to file
     anova_figure.savefig(os.path.join(figuredir, "anova_results.pdf"))
+
+    # close plot
+    plt.close()
+
+    # plot anova post-hoc results
+    run_data_mean = pd.DataFrame(anova_data.tail(12))
+    post_hocs_figure = plot_barplot(
+        run_data_mean,
+        run_data_mean[run_data_mean["Subject"] == "Mean"]["Run"],
+        run_data_mean[run_data_mean["Subject"] == "Mean"]["Number of Blinks"],
+        run_data_mean[run_data_mean["Subject"] == "Mean"]["Run"],
+    )
+
+    # add p-values to plot for all post-hoc comparisons where p < 0.05
+    for index, comparison in enumerate(post_hocs["p-unc"] < 0.05):
+        if comparison is True:
+            barplot_annotate_brackets(
+                num1=int(post_hocs.loc[index, "A"]),
+                num2=int(post_hocs.loc[index, "B"]),
+                data="*",
+                center=[0, 1, 2, 3, 4, 5],
+                height=list(
+                    run_data_mean[run_data_mean["Subject"] == "Mean"][
+                        "Number of Blinks"
+                    ]
+                ),
+                yerr=None,
+                dh=0.001 + (1 / 80 * (index + 1)),
+                barh=0.05,
+                fs=20,
+            )
+        else:
+            continue
+
+    # save plot to file
+    post_hocs_figure.savefig(os.path.join(figuredir, "anova_post_hocs.pdf"))
 
     # close plot
     plt.close()
