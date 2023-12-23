@@ -56,7 +56,7 @@ for s = 1:length(runs)
 
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).name = 'switch';
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).onset = (run_logs{1,s}.onset /1000);
-    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).duration = 0 ; % regressor as a step function
+    matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).duration = 0 ; % regressor as a stick function
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).tmod = 0;
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
     matlabbatch{1}.spm.stats.fmri_spec.sess(s).cond(3).orth = 1;
